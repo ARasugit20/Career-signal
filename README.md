@@ -14,6 +14,8 @@ This repo includes a working Phase 1 starter:
   - role selector
   - loading/error states
   - Signal Report display cards
+  - static report mode (no API key required)
+  - shareable report URL params (`?company=<id>&role=<id>`)
 
 ## Structure
 
@@ -40,8 +42,16 @@ career-signal/
 4. Run frontend:
    - `npm run dev:client`
 
+### Zero-cost mode (recommended for deployment)
+
+Set `VITE_REPORT_MODE=static` (default). This runs the app entirely from curated JSON data and requires no API key or backend server.
+
+### Optional AI mode
+
+Set `VITE_REPORT_MODE=ai` in the frontend and run the backend with `ANTHROPIC_API_KEY` configured. The frontend will call `/api/signal`.
+
 ## Next Build Steps
 
 - Expand schema coverage to include SDE full-time and domain roles
 - Validate `/api/signal` output against 5 company-role combos with real API key
-- Improve report sharing (screenshot-friendly layout + URL params)
+- Add screenshot/share-card export flow

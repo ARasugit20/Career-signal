@@ -14,6 +14,12 @@ export default function ProjectCard({ project, index }) {
         <span className="font-semibold text-slate-200">Interview angle: </span>
         {project.interview_angle}
       </p>
+      {project.dataset && (
+        <p className="mt-3 text-sm text-slate-300">
+          <span className="font-semibold text-slate-200">Dataset: </span>
+          {project.dataset}
+        </p>
+      )}
     </article>
   );
 }

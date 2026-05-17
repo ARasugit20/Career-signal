@@ -12,13 +12,21 @@ export default function SignalReport({ report }) {
         <h2 className="mt-2 text-2xl font-bold text-slate-100">
           {report.company} — {report.role}
         </h2>
+        <div className="mt-2 flex flex-wrap gap-2">
+          <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">
+            Tier: {report.company_meta?.tier || "N/A"}
+          </span>
+          <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">
+            Industry: {report.company_meta?.industry || "N/A"}
+          </span>
+        </div>
         <p className="mt-3 text-slate-200">{report.headline}</p>
         <p className="mt-2 text-sm leading-relaxed text-slate-300">{report.signal_summary}</p>
       </header>
 
       <div>
         <p className="mb-2 text-sm font-semibold text-slate-200">Signal strength categories</p>
-        <SignalStrengthBar />
+        <SignalStrengthBar bands={report.signal_bands} />
       </div>
 
       <div>
@@ -72,6 +80,19 @@ export default function SignalReport({ report }) {
           >
             Open course
           </a>
+        </div>
+      )}
+
+      {!!(report.gap_actions || []).length && (
+        <div className="rounded-2xl border border-rose-500/30 bg-rose-500/10 p-4">
+          <p className="text-sm font-semibold text-rose-100">One action per gap</p>
+          <ul className="mt-2 space-y-2">
+            {report.gap_actions.map((item) => (
+              <li key={item.gap} className="text-sm text-rose-50">
+                <span className="font-semibold">{item.gap}:</span> {item.action}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { buildStaticReport } from "../lib/buildStaticReport";
 
-const API_BASE =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api";
+const REPORT_MODE = import.meta.env.VITE_REPORT_MODE || "static";
 
-export function useSignalReport() {
+export function useSignalReport(companies) {
   const [report, setReport] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const companyLookup = useMemo(() => {
+    const map = new Map();
+    (companies || []).forEach((company) => {
+      map.set(company.id, company);
+    });
+    return map;
+  }, [companies]);
 
   async function generateSignal(companyId, roleId) {
     setLoading(true);
@@ -14,6 +23,19 @@ export function useSignalReport() {
     setReport(null);
 
     try {
+      if (REPORT_MODE === "static") {
+        const companyData = companyLookup.get(companyId);
+        if (!companyData) {
+          throw new Error("Selected company was not found in local data.");
+        }
+        const roleData = companyData.roles?.[roleId];
+        if (!roleData) {
+          throw new Error("Selected role was not found for this company.");
+        }
+        setReport(buildStaticReport(companyData, roleData));
+        return;
+      }
+
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 30000);
 

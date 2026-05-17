@@ -8,10 +8,14 @@ export default function Home({
   onSelectCompany,
   onSelectRole,
   onSubmit,
+  reportMode,
   disabled
 }) {
   const activeCompany = companies.find((item) => item.id === selectedCompany);
-  const roles = activeCompany?.roles || [];
+  const rolesRaw = activeCompany?.roles || [];
+  const roles = Array.isArray(rolesRaw)
+    ? rolesRaw
+    : Object.entries(rolesRaw).map(([id, role]) => ({ id, title: role.title }));
 
   return (
     <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-5 shadow-xl md:p-7">
@@ -20,8 +24,10 @@ export default function Home({
         Build projects that send real hiring signal
       </h1>
       <p className="mt-3 text-sm leading-relaxed text-slate-300">
-        Choose your target company and role to generate a tailored Signal Report in under
-        30 seconds.
+        Choose your target company and role to generate a tailored Signal Report.
+      </p>
+      <p className="mt-2 text-xs text-slate-400">
+        Mode: {reportMode === "static" ? "Static (no API cost)" : "AI-generated"}
       </p>
 
       <div className="mt-5 grid gap-4 md:grid-cols-2">
