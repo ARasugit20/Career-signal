@@ -1,6 +1,6 @@
 # Career Signal
 
-Role intelligence engine for CS students to build projects that match real hiring signal.
+Role intelligence engine for CS students — pick a company and role, get a Signal Report with project ideas, JD keywords, and interview framing.
 
 ## Current Boilerplate Status
 
