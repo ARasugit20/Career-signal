@@ -2,8 +2,9 @@
 
 Career Signal is a role intelligence engine for CS students who know where they want to work but do not know what to build to get there.
 
-**Live demo:** Add your Vercel URL here after deploy  
+**Live demo:** Pending Vercel auth in this environment. Add deployed URL after `vercel --prod` login.  
 **Tech stack:** React, Vite, TailwindCSS, Node.js, Express, Anthropic (optional AI mode)
+**Suggested GitHub topics:** `react`, `vite`, `career`, `recruiting`, `portfolio`
 
 ## Problem
 
@@ -39,9 +40,11 @@ Data is intentionally curated, versioned, and explainable instead of being scrap
 - Static report mode (default): no backend or API key required
 - Optional AI mode through `/api/signal`
 - Searchable company selector
+- Gap Analysis tab (GitHub + resume + target JD overlap)
+- Outreach Tracker tab with localStorage persistence and follow-up dashboard
 - Role-specific signal bands: Strong / Developing / Gap
 - One action per gap
-- Shareable deep links and copyable report summary
+- Shareable deep links and report exports (summary, link, LinkedIn post, markdown card)
 - Mobile-friendly report UI
 
 ## Run Locally
@@ -68,9 +71,16 @@ Use Vercel with static mode:
 
 `vercel.json` is already included for this configuration.
 
+If CLI says token invalid, run:
+- `vercel login`
+- `vercel --prod --yes`
+
+Then update this README with the live URL.
+
 ## Testing and CI
 
 - Client unit test for static report builder: `npm run test:client`
+- Gap analyzer and outreach storage helper tests included in client test suite
 - GitHub Actions CI runs build + tests on push and PR to `main`
 
 ## What I Learned
@@ -81,6 +91,8 @@ Use Vercel with static mode:
 
 ## Roadmap
 
-- Expand dataset to 20+ companies with consistent role coverage
-- Add screenshot/share-card export for social distribution
-- Ship Phase 2 gap analysis from resume/GitHub input
+- [x] Expand dataset to 15+ companies with intern-role coverage
+- [x] Ship Phase 2 gap analysis from resume/GitHub input
+- [x] Add outreach tracker with local backup import/export
+- [x] Add share-card markdown export and LinkedIn post copy action
+- [ ] Add screenshot/PNG export path for social sharing

@@ -5,6 +5,8 @@ import LoadingState from "./components/LoadingState";
 import ErrorState from "./components/ErrorState";
 import { useSignalReport } from "./hooks/useSignalReport";
 import companiesLocal from "./data/companies.json";
+import GapAnalysis from "./pages/GapAnalysis";
+import Outreach from "./pages/Outreach";
 
 const API_BASE =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api";
@@ -12,6 +14,7 @@ const REPORT_MODE = import.meta.env.VITE_REPORT_MODE || "static";
 const IS_STATIC_MODE = REPORT_MODE === "static";
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState("signal");
   const [companies, setCompanies] = useState([]);
   const [selectedCompany, setSelectedCompany] = useState("");
   const [selectedRole, setSelectedRole] = useState("");
@@ -83,23 +86,51 @@ export default function App() {
   return (
     <main className="mx-auto min-h-screen w-full max-w-6xl px-4 py-6 md:px-6 md:py-10">
       <div className="grid gap-5">
-        <Home
-          companies={companies}
-          selectedCompany={selectedCompany}
-          selectedRole={selectedRole}
-          onSelectCompany={setSelectedCompany}
-          onSelectRole={setSelectedRole}
-          onSubmit={onSubmit}
-          reportMode={REPORT_MODE}
-          disabled={loading || !!companiesError}
-        />
+        <div className="flex flex-wrap gap-2">
+          {[
+            { id: "signal", label: "Signal Report" },
+            { id: "gap", label: "Gap Analysis" },
+            { id: "outreach", label: "Outreach" }
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setActiveTab(tab.id)}
+              className={`rounded-lg border px-3 py-2 text-sm font-semibold transition ${
+                activeTab === tab.id
+                  ? "border-indigo-400 bg-indigo-500/20 text-indigo-200"
+                  : "border-slate-700 text-slate-300 hover:border-indigo-400 hover:text-indigo-300"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
 
-        {companiesError && <ErrorState message={companiesError} />}
-        {loading && (
-          <LoadingState companyName={activeCompanyName} roleTitle={activeRoleTitle} />
+        {activeTab === "signal" && (
+          <>
+            <Home
+              companies={companies}
+              selectedCompany={selectedCompany}
+              selectedRole={selectedRole}
+              onSelectCompany={setSelectedCompany}
+              onSelectRole={setSelectedRole}
+              onSubmit={onSubmit}
+              reportMode={REPORT_MODE}
+              disabled={loading || !!companiesError}
+            />
+
+            {companiesError && <ErrorState message={companiesError} />}
+            {loading && (
+              <LoadingState companyName={activeCompanyName} roleTitle={activeRoleTitle} />
+            )}
+            {error && <ErrorState message={error} />}
+            {report && <Report report={report} />}
+          </>
         )}
-        {error && <ErrorState message={error} />}
-        {report && <Report report={report} />}
+
+        {activeTab === "gap" && <GapAnalysis companies={companies} />}
+        {activeTab === "outreach" && <Outreach companies={companies} />}
       </div>
     </main>
   );
