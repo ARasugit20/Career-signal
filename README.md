@@ -1,57 +1,86 @@
 # Career Signal
 
-Role intelligence engine for CS students — pick a company and role, get a Signal Report with project ideas, JD keywords, and interview framing.
+Career Signal is a role intelligence engine for CS students who know where they want to work but do not know what to build to get there.
 
-## Current Boilerplate Status
+**Live demo:** Add your Vercel URL here after deploy  
+**Tech stack:** React, Vite, TailwindCSS, Node.js, Express, Anthropic (optional AI mode)
 
-This repo includes a working Phase 1 starter:
+## Problem
 
-- `server/data/companies.json` seeded with 5 companies and 2 roles each
-- `POST /api/signal` route with Claude Sonnet JSON-only prompt pattern
-- `GET /api/companies` route for company/role selectors
-- React + Vite + Tailwind frontend with:
-  - company selector
-  - role selector
-  - loading/error states
-  - Signal Report display cards
-  - static report mode (no API key required)
-  - shareable report URL params (`?company=<id>&role=<id>`)
+Most student portfolios look the same: tutorial clones with weak hiring signal. Recruiters do not reject students because they are untalented; they reject because projects do not map clearly to what teams hire for.
 
-## Structure
+Career Signal solves that by turning a target company + role into a practical build plan: what projects to ship, which JD keywords to mirror, which dataset to use, and how to frame the work in interviews.
+
+## How It Works
+
+1. User selects a company and role.
+2. App generates a Signal Report with project recommendations and signal bands.
+3. User shares report link (`?company=<id>&role=<id>`) or copies summary.
+
+## Architecture
 
 ```
-career-signal/
-├── client/
-├── server/
-│   ├── data/companies.json
-│   └── routes/signal.js
-├── .env.example
-└── README.md
+User -> React Client
+       -> Static mode: local curated JSON -> instant report (default, zero API cost)
+       -> AI mode: Express /api/signal -> Claude response -> validated JSON report
 ```
+
+## Data Methodology
+
+Company-role signals are manually curated from:
+- public job descriptions
+- engineering blogs and career pages
+- interview pattern writeups and role expectations
+
+Data is intentionally curated, versioned, and explainable instead of being scraped or blindly generated.
+
+## Current Features
+
+- Static report mode (default): no backend or API key required
+- Optional AI mode through `/api/signal`
+- Searchable company selector
+- Role-specific signal bands: Strong / Developing / Gap
+- One action per gap
+- Shareable deep links and copyable report summary
+- Mobile-friendly report UI
 
 ## Run Locally
 
-1. Install dependencies:
+1. Install dependencies
    - `npm install --prefix server`
    - `npm install --prefix client`
-2. Create env file:
-   - `cp .env.example server/.env`
-   - Add `ANTHROPIC_API_KEY`
-3. Run backend:
-   - `npm run dev:server`
-4. Run frontend:
+2. Run frontend (static mode)
    - `npm run dev:client`
+3. Optional AI mode
+   - `cp .env.example server/.env`
+   - Set `ANTHROPIC_API_KEY`
+   - Set frontend env `VITE_REPORT_MODE=ai`
+   - Run `npm run dev:server`
 
-### Zero-cost mode (recommended for deployment)
+## Deploy (Zero-Cost Path)
 
-Set `VITE_REPORT_MODE=static` (default). This runs the app entirely from curated JSON data and requires no API key or backend server.
+Use Vercel with static mode:
 
-### Optional AI mode
+1. Import GitHub repo
+2. Build command: `npm --prefix client run build`
+3. Output directory: `client/dist`
+4. Set env var: `VITE_REPORT_MODE=static`
 
-Set `VITE_REPORT_MODE=ai` in the frontend and run the backend with `ANTHROPIC_API_KEY` configured. The frontend will call `/api/signal`.
+`vercel.json` is already included for this configuration.
 
-## Next Build Steps
+## Testing and CI
 
-- Expand schema coverage to include SDE full-time and domain roles
-- Validate `/api/signal` output against 5 company-role combos with real API key
-- Add screenshot/share-card export flow
+- Client unit test for static report builder: `npm run test:client`
+- GitHub Actions CI runs build + tests on push and PR to `main`
+
+## What I Learned
+
+1. **Structured output reliability:** AI responses need strict schemas and defensive parsing to stay production-safe.
+2. **Latency-driven UX design:** even a useful product feels broken if users wait too long for value, which pushed static mode as default.
+3. **Honest signal design:** categorical signal bands are more trustworthy than fake precision scores without outcome-grounded data.
+
+## Roadmap
+
+- Expand dataset to 20+ companies with consistent role coverage
+- Add screenshot/share-card export for social distribution
+- Ship Phase 2 gap analysis from resume/GitHub input

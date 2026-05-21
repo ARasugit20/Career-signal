@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import SkillPill from "./SkillPill";
 import SignalStrengthBar from "./SignalStrengthBar";
+import ReportActions from "./ReportActions";
 
 export default function SignalReport({ report }) {
   if (!report) return null;
@@ -12,6 +13,9 @@ export default function SignalReport({ report }) {
         <h2 className="mt-2 text-2xl font-bold text-slate-100">
           {report.company} — {report.role}
         </h2>
+        <div className="mt-3">
+          <ReportActions report={report} />
+        </div>
         <div className="mt-2 flex flex-wrap gap-2">
           <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">
             Tier: {report.company_meta?.tier || "N/A"}

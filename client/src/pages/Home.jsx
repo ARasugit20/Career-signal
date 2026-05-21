@@ -55,6 +55,9 @@ export default function Home({
       >
         Generate Signal Report
       </button>
+      <p className="mt-3 text-xs text-slate-400">
+        Tip: shareable links are created automatically after you generate a report.
+      </p>
     </section>
   );
 }
