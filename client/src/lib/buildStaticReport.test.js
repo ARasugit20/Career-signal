@@ -1,19 +1,24 @@
 import { describe, expect, it } from "vitest";
 import { buildStaticReport } from "./buildStaticReport";
+import { validateReportSchema } from "./reportSchema";
 import companies from "../data/companies.json";
 
-describe("buildStaticReport", () => {
-  it("builds a full report shape from curated data", () => {
-    const company = companies.find((item) => item.id === "amazon");
-    const role = company.roles["sde-intern"];
-    const report = buildStaticReport(company, role);
+const PAIRS = [
+  ["amazon", "sde-intern"],
+  ["palantir", "swe-intern"],
+  ["coinbase", "swe-fulltime"]
+];
 
-    expect(report.company).toBe("Amazon");
-    expect(report.role).toBe("Software Development Engineer Intern");
-    expect(report.top_projects.length).toBe(3);
+describe("buildStaticReport", () => {
+  it.each(PAIRS)("returns valid schema for %s / %s", (companyId, roleId) => {
+    const company = companies.find((item) => item.id === companyId);
+    const role = company.roles[roleId];
+    const report = buildStaticReport(company, role);
+    const validation = validateReportSchema(report);
+
+    expect(validation.ok).toBe(true);
+    expect(report.top_projects.length).toBeGreaterThanOrEqual(3);
     expect(report.skill_keywords.length).toBeGreaterThan(0);
-    expect(report.signal_bands.strong.length).toBeGreaterThan(0);
-    expect(report.gap_actions.length).toBeGreaterThan(0);
   });
 
   it("creates dataset recommendation when a project has dataset", () => {

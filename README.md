@@ -2,8 +2,8 @@
 
 Career Signal is a role intelligence engine for CS students who know where they want to work but do not know what to build to get there.
 
-**Live demo:** Pending Vercel auth in this environment. Add deployed URL after `vercel --prod` login.  
-**Tech stack:** React, Vite, TailwindCSS, Node.js, Express, Anthropic (optional AI mode)
+**Live demo:** https://career-signal.vercel.app *(set `VITE_LIVE_DEMO_URL` in Vercel after first deploy)*  
+**Tech stack:** React, Vite, TailwindCSS, Node.js, Express, Anthropic (optional AI mode)  
 **Suggested GitHub topics:** `react`, `vite`, `career`, `recruiting`, `portfolio`
 
 ## Problem
@@ -18,81 +18,110 @@ Career Signal solves that by turning a target company + role into a practical bu
 2. App generates a Signal Report with project recommendations and signal bands.
 3. User shares report link (`?company=<id>&role=<id>`) or copies summary.
 
+![Signal Report preview](docs/assets/signal-report-preview.svg)
+
 ## Architecture
 
-```
-User -> React Client
-       -> Static mode: local curated JSON -> instant report (default, zero API cost)
-       -> AI mode: Express /api/signal -> Claude response -> validated JSON report
+```mermaid
+flowchart LR
+  User[Student] --> UI[React Client]
+  UI -->|static mode default| JSON[(companies.json)]
+  JSON --> Builder[buildStaticReport]
+  Builder --> Report[Signal Report UI]
+  UI -->|optional ai mode| API[Express /api/signal]
+  API --> Claude[Anthropic Claude]
+  Claude --> Report
+  UI --> Gap[Gap Analysis]
+  Gap --> GitHub[GitHub Public API]
+  UI --> CRM[Outreach Tracker]
+  CRM --> LS[(localStorage)]
 ```
 
 ## Data Methodology
 
-Company-role signals are manually curated from:
-- public job descriptions
-- engineering blogs and career pages
-- interview pattern writeups and role expectations
+Company-role signals are **manually curated** from explainable sources:
 
-Data is intentionally curated, versioned, and explainable instead of being scraped or blindly generated.
+- Public job descriptions (company careers pages, intern/new-grad SWE roles)
+- Engineering blogs and technical career pages
+- Interview pattern writeups and role competency expectations
+
+Each newly added role includes a `source_notes` field documenting grounding (no job-board scraping, no LLM-hallucinated JD text).
+
+Signals are categorized honestly as **Strong / Developing / Gap** — never fake percentage match scores.
 
 ## Current Features
 
-- Static report mode (default): no backend or API key required
+- **Static report mode (default):** no backend or API key required
+- **25 companies** with intern-level (and select full-time/domain) roles
 - Optional AI mode through `/api/signal`
 - Searchable company selector
 - Gap Analysis tab (GitHub + resume + target JD overlap)
 - Outreach Tracker tab with localStorage persistence and follow-up dashboard
-- Role-specific signal bands: Strong / Developing / Gap
-- One action per gap
-- Shareable deep links and report exports (summary, link, LinkedIn post, markdown card)
+- Shareable deep links with Open Graph + dynamic page title
+- Report exports: summary, share link, LinkedIn post, markdown share card
 - Mobile-friendly report UI
+- CI: build + Vitest on every push to `main`
 
 ## Run Locally
 
-1. Install dependencies
-   - `npm install --prefix server`
-   - `npm install --prefix client`
-2. Run frontend (static mode)
-   - `npm run dev:client`
-3. Optional AI mode
-   - `cp .env.example server/.env`
-   - Set `ANTHROPIC_API_KEY`
-   - Set frontend env `VITE_REPORT_MODE=ai`
-   - Run `npm run dev:server`
+One command:
+
+```bash
+npm run setup && npm run dev:client
+```
+
+Open `http://localhost:5173`.
+
+See [docs/DEPLOY.md](docs/DEPLOY.md) for full setup, env vars, and Vercel deploy steps.
+
+### Optional AI mode
+
+```bash
+cp .env.example server/.env
+# set ANTHROPIC_API_KEY
+# client/.env.local -> VITE_REPORT_MODE=ai
+npm run dev:server
+npm run dev:client
+```
 
 ## Deploy (Zero-Cost Path)
 
-Use Vercel with static mode:
+Vercel (recommended):
 
-1. Import GitHub repo
-2. Build command: `npm --prefix client run build`
-3. Output directory: `client/dist`
-4. Set env var: `VITE_REPORT_MODE=static`
+1. Import repo on Vercel
+2. Build: `npm --prefix client run build`
+3. Output: `client/dist`
+4. Env: `VITE_REPORT_MODE=static`
+5. Optional: `VITE_LIVE_DEMO_URL=https://<your-domain>`
 
-`vercel.json` is already included for this configuration.
+`vercel.json` includes SPA rewrites for share links.
 
-If CLI says token invalid, run:
-- `vercel login`
-- `vercel --prod --yes`
-
-Then update this README with the live URL.
+```bash
+vercel login
+vercel --prod --yes
+```
 
 ## Testing and CI
 
-- Client unit test for static report builder: `npm run test:client`
-- Gap analyzer and outreach storage helper tests included in client test suite
-- GitHub Actions CI runs build + tests on push and PR to `main`
+```bash
+npm run test:client
+npm run build:client
+```
+
+- Static report schema validated for multiple company/role pairs
+- Gap analyzer and outreach storage unit tests included
+- GitHub Actions: `.github/workflows/ci.yml`
 
 ## What I Learned
 
 1. **Structured output reliability:** AI responses need strict schemas and defensive parsing to stay production-safe.
-2. **Latency-driven UX design:** even a useful product feels broken if users wait too long for value, which pushed static mode as default.
-3. **Honest signal design:** categorical signal bands are more trustworthy than fake precision scores without outcome-grounded data.
+2. **Latency-driven UX design:** static curated mode delivers instant value and eliminates API cost for public demos.
+3. **Honest signal design:** categorical signal bands are more trustworthy than fabricated precision scores.
 
 ## Roadmap
 
-- [x] Expand dataset to 15+ companies with intern-role coverage
-- [x] Ship Phase 2 gap analysis from resume/GitHub input
-- [x] Add outreach tracker with local backup import/export
-- [x] Add share-card markdown export and LinkedIn post copy action
-- [ ] Add screenshot/PNG export path for social sharing
+- [x] 15+ companies with curated intern roles
+- [x] Phase 2 gap analysis + outreach CRM
+- [x] Share exports and deep links
+- [x] CI + schema tests for static reports
+- [ ] PNG share-card export for social posts

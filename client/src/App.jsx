@@ -7,6 +7,8 @@ import { useSignalReport } from "./hooks/useSignalReport";
 import companiesLocal from "./data/companies.json";
 import GapAnalysis from "./pages/GapAnalysis";
 import Outreach from "./pages/Outreach";
+import { buildShareUrl } from "./lib/shareUrl";
+import { updateReportMeta, resetPageMeta } from "./lib/updatePageMeta";
 
 const API_BASE =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api";
@@ -76,12 +78,19 @@ export default function App() {
 
   function onSubmit() {
     if (!selectedCompany || !selectedRole) return;
-    const params = new URLSearchParams(window.location.search);
-    params.set("company", selectedCompany);
-    params.set("role", selectedRole);
-    window.history.replaceState({}, "", `${window.location.pathname}?${params.toString()}`);
+    const shareUrl = buildShareUrl(selectedCompany, selectedRole);
+    window.history.replaceState({}, "", shareUrl);
     generateSignal(selectedCompany, selectedRole);
   }
+
+  useEffect(() => {
+    if (report && selectedCompany && selectedRole) {
+      const shareUrl = buildShareUrl(selectedCompany, selectedRole);
+      updateReportMeta(report, shareUrl);
+      return;
+    }
+    resetPageMeta();
+  }, [report, selectedCompany, selectedRole]);
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-6xl px-4 py-6 md:px-6 md:py-10">
@@ -125,7 +134,13 @@ export default function App() {
               <LoadingState companyName={activeCompanyName} roleTitle={activeRoleTitle} />
             )}
             {error && <ErrorState message={error} />}
-            {report && <Report report={report} />}
+            {report && (
+              <Report
+                report={report}
+                companyId={selectedCompany}
+                roleId={selectedRole}
+              />
+            )}
           </>
         )}
 

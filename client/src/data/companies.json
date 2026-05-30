@@ -40,21 +40,36 @@
           {
             "title": "URL Shortener with Redis Caching",
             "why": "Shows API design, cache invalidation decisions, and scalable backend thinking tied to Amazon-scale systems.",
-            "tech": ["Node.js", "Redis", "PostgreSQL", "Express"],
+            "tech": [
+              "Node.js",
+              "Redis",
+              "PostgreSQL",
+              "Express"
+            ],
             "dataset": null,
             "interview_angle": "Explain what fails first at 10x traffic and how your design avoids that bottleneck."
           },
           {
             "title": "Order Event Processor",
             "why": "Demonstrates operational reliability and asynchronous processing common in Amazon workflows.",
-            "tech": ["Python", "RabbitMQ", "PostgreSQL", "Docker"],
+            "tech": [
+              "Python",
+              "RabbitMQ",
+              "PostgreSQL",
+              "Docker"
+            ],
             "dataset": null,
             "interview_angle": "Discuss idempotency and how you handled duplicate events."
           },
           {
             "title": "Product Recommendation API",
             "why": "Connects directly to Amazon personalization, turning ML basics into product signal.",
-            "tech": ["Python", "Pandas", "scikit-learn", "FastAPI"],
+            "tech": [
+              "Python",
+              "Pandas",
+              "scikit-learn",
+              "FastAPI"
+            ],
             "dataset": "Amazon Product Reviews (Kaggle)",
             "interview_angle": "Frame trade-offs between recommendation quality, cold start, and response time."
           }
@@ -100,21 +115,36 @@
           {
             "title": "Inventory Forecasting Service",
             "why": "Combines business impact with system reliability and measurable backend outcomes.",
-            "tech": ["Node.js", "TypeScript", "PostgreSQL", "BullMQ"],
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "BullMQ"
+            ],
             "dataset": "M5 Forecasting Dataset (Kaggle)",
             "interview_angle": "Share the production-style metrics you tracked and improved."
           },
           {
             "title": "Multi-tenant Notification Platform",
             "why": "Represents design patterns used in customer-facing systems at Amazon scale.",
-            "tech": ["Java", "Spring Boot", "Redis", "AWS SNS"],
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "Redis",
+              "AWS SNS"
+            ],
             "dataset": null,
             "interview_angle": "Walk through failure handling and back-pressure controls."
           },
           {
             "title": "Search Ranking Microservice",
             "why": "Signals relevance ranking knowledge and API latency optimization.",
-            "tech": ["Python", "FastAPI", "Elasticsearch", "Docker"],
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Elasticsearch",
+              "Docker"
+            ],
             "dataset": "MS MARCO Passage Ranking",
             "interview_angle": "Explain ranking quality versus latency trade-offs."
           }
@@ -167,21 +197,36 @@
           {
             "title": "Distributed URL Crawler",
             "why": "Signals algorithmic depth plus concurrency and system decomposition.",
-            "tech": ["Go", "Redis", "PostgreSQL", "Docker"],
+            "tech": [
+              "Go",
+              "Redis",
+              "PostgreSQL",
+              "Docker"
+            ],
             "dataset": null,
             "interview_angle": "Discuss scheduler design and deduplication strategy."
           },
           {
             "title": "Autocomplete Search Service",
             "why": "Demonstrates trie/ranking fundamentals used in search products.",
-            "tech": ["Java", "Spring Boot", "Trie", "REST API"],
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "Trie",
+              "REST API"
+            ],
             "dataset": "AOL Search Query Logs",
             "interview_angle": "Explain how relevance and response time were balanced."
           },
           {
             "title": "Code Submission Judge",
             "why": "Shows systems reliability and sandbox execution constraints.",
-            "tech": ["Node.js", "Docker", "Queue workers", "PostgreSQL"],
+            "tech": [
+              "Node.js",
+              "Docker",
+              "Queue workers",
+              "PostgreSQL"
+            ],
             "dataset": null,
             "interview_angle": "Share how you handled untrusted code safely."
           }
@@ -225,21 +270,36 @@
           {
             "title": "Feature Flag Experiment Platform",
             "why": "Signals understanding of safe launches, metrics, and iterative shipping.",
-            "tech": ["TypeScript", "Node.js", "PostgreSQL", "React"],
+            "tech": [
+              "TypeScript",
+              "Node.js",
+              "PostgreSQL",
+              "React"
+            ],
             "dataset": null,
             "interview_angle": "Walk through rollback strategy and experiment design."
           },
           {
             "title": "Streaming Analytics Pipeline",
             "why": "Demonstrates event-driven design and scalable processing patterns.",
-            "tech": ["Python", "Kafka", "BigQuery", "dbt"],
+            "tech": [
+              "Python",
+              "Kafka",
+              "BigQuery",
+              "dbt"
+            ],
             "dataset": "NYC Taxi Trips",
             "interview_angle": "Explain data quality controls and late-arriving event handling."
           },
           {
             "title": "Geo-aware Route API",
             "why": "Combines algorithms and product utility in an end-to-end service.",
-            "tech": ["Go", "PostGIS", "Redis", "gRPC"],
+            "tech": [
+              "Go",
+              "PostGIS",
+              "Redis",
+              "gRPC"
+            ],
             "dataset": "OpenStreetMap",
             "interview_angle": "Describe algorithm choices for speed versus path quality."
           }
@@ -291,21 +351,36 @@
           {
             "title": "Portfolio Risk Dashboard API",
             "why": "Directly mirrors finance engineering responsibilities and risk communication.",
-            "tech": ["Python", "FastAPI", "PostgreSQL", "Pandas"],
+            "tech": [
+              "Python",
+              "FastAPI",
+              "PostgreSQL",
+              "Pandas"
+            ],
             "dataset": "Fama-French Factors",
             "interview_angle": "Explain factor exposure and why it matters to portfolio managers."
           },
           {
             "title": "Trade Reconciliation Engine",
             "why": "Shows attention to correctness, edge cases, and operational workflows.",
-            "tech": ["Java", "Spring Boot", "Kafka", "PostgreSQL"],
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "Kafka",
+              "PostgreSQL"
+            ],
             "dataset": null,
             "interview_angle": "Describe reconciliation logic and failure recovery decisions."
           },
           {
             "title": "Market Stress Testing Tool",
             "why": "Signals quantitative reasoning with practical backend delivery.",
-            "tech": ["Python", "NumPy", "Streamlit", "SQLite"],
+            "tech": [
+              "Python",
+              "NumPy",
+              "Streamlit",
+              "SQLite"
+            ],
             "dataset": "SEC Market Data",
             "interview_angle": "Walk through assumptions and limitations in your stress scenarios."
           }
@@ -349,21 +424,36 @@
           {
             "title": "Factor Investing Backtester",
             "why": "Shows signal discovery, testing rigor, and portfolio-level decision thinking.",
-            "tech": ["Python", "Pandas", "NumPy", "Plotly"],
+            "tech": [
+              "Python",
+              "Pandas",
+              "NumPy",
+              "Plotly"
+            ],
             "dataset": "Quandl EOD Data",
             "interview_angle": "Discuss out-of-sample performance and overfitting controls."
           },
           {
             "title": "Volatility Regime Classifier",
             "why": "Demonstrates market-state awareness and modeling under uncertainty.",
-            "tech": ["Python", "scikit-learn", "Statsmodels", "Jupyter"],
+            "tech": [
+              "Python",
+              "scikit-learn",
+              "Statsmodels",
+              "Jupyter"
+            ],
             "dataset": "CBOE VIX Historical Data",
             "interview_angle": "Explain how regime shifts changed allocation decisions."
           },
           {
             "title": "Credit Risk Probability Model",
             "why": "Connects machine learning to practical risk management outcomes.",
-            "tech": ["Python", "XGBoost", "SQL", "FastAPI"],
+            "tech": [
+              "Python",
+              "XGBoost",
+              "SQL",
+              "FastAPI"
+            ],
             "dataset": "LendingClub Loan Data",
             "interview_angle": "Frame precision-recall trade-offs in financial risk terms."
           }
@@ -416,21 +506,36 @@
           {
             "title": "Claims Intake Assistant",
             "why": "Mirrors insurance workflows and demonstrates user-first system design.",
-            "tech": ["React", "Node.js", "PostgreSQL", "Twilio"],
+            "tech": [
+              "React",
+              "Node.js",
+              "PostgreSQL",
+              "Twilio"
+            ],
             "dataset": "Kaggle Insurance Claims Data",
             "interview_angle": "Show how you reduced user friction in first notice of loss."
           },
           {
             "title": "Policy Recommendation Service",
             "why": "Signals practical ML-to-product integration relevant for customer products.",
-            "tech": ["Python", "FastAPI", "scikit-learn", "React"],
+            "tech": [
+              "Python",
+              "FastAPI",
+              "scikit-learn",
+              "React"
+            ],
             "dataset": "Insurance Customer Data (Kaggle)",
             "interview_angle": "Explain fairness and explainability choices in recommendations."
           },
           {
             "title": "Agent Performance Dashboard",
             "why": "Demonstrates analytics delivery and business reporting fluency.",
-            "tech": ["TypeScript", "Next.js", "Supabase", "Chart.js"],
+            "tech": [
+              "TypeScript",
+              "Next.js",
+              "Supabase",
+              "Chart.js"
+            ],
             "dataset": null,
             "interview_angle": "Discuss which metrics changed agent behavior and why."
           }
@@ -474,21 +579,36 @@
           {
             "title": "Claim Severity Prediction Pipeline",
             "why": "Demonstrates core insurance analytics impact with model + deployment mindset.",
-            "tech": ["Python", "XGBoost", "Airflow", "PostgreSQL"],
+            "tech": [
+              "Python",
+              "XGBoost",
+              "Airflow",
+              "PostgreSQL"
+            ],
             "dataset": "Allstate Claims Severity (Kaggle)",
             "interview_angle": "Explain how predictions inform reserving and claims triage."
           },
           {
             "title": "Fraud Detection Model with Explainability",
             "why": "Signals practical ML plus interpretability for risk-sensitive use cases.",
-            "tech": ["Python", "LightGBM", "SHAP", "FastAPI"],
+            "tech": [
+              "Python",
+              "LightGBM",
+              "SHAP",
+              "FastAPI"
+            ],
             "dataset": "IEEE-CIS Fraud Detection",
             "interview_angle": "Discuss recall versus precision cost trade-offs for investigators."
           },
           {
             "title": "Customer Retention Experiment Analyzer",
             "why": "Shows business-first experimentation and clear recommendation output.",
-            "tech": ["Python", "SQL", "dbt", "Tableau"],
+            "tech": [
+              "Python",
+              "SQL",
+              "dbt",
+              "Tableau"
+            ],
             "dataset": "Telco Customer Churn",
             "interview_angle": "Present how experiment outcomes changed retention strategy."
           }
@@ -540,21 +660,36 @@
           {
             "title": "Subscription Billing API",
             "why": "Reflects core Stripe product patterns and API contract quality.",
-            "tech": ["Node.js", "TypeScript", "PostgreSQL", "Redis"],
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "Redis"
+            ],
             "dataset": null,
             "interview_angle": "Explain idempotency keys and webhook retry handling."
           },
           {
             "title": "Fraud Signal Scoring Service",
             "why": "Demonstrates risk-aware payment architecture and model-assisted decisions.",
-            "tech": ["Python", "FastAPI", "scikit-learn", "Kafka"],
+            "tech": [
+              "Python",
+              "FastAPI",
+              "scikit-learn",
+              "Kafka"
+            ],
             "dataset": "Credit Card Fraud Detection (Kaggle)",
             "interview_angle": "Discuss false positive cost versus fraud prevention coverage."
           },
           {
             "title": "Developer API Analytics Dashboard",
             "why": "Shows developer-experience focus with actionable telemetry.",
-            "tech": ["React", "Node.js", "ClickHouse", "TailwindCSS"],
+            "tech": [
+              "React",
+              "Node.js",
+              "ClickHouse",
+              "TailwindCSS"
+            ],
             "dataset": null,
             "interview_angle": "Share how metrics informed API usability improvements."
           }
@@ -598,21 +733,36 @@
           {
             "title": "Payment Retry Orchestrator",
             "why": "Shows hard reliability problems in failed transaction recovery flows.",
-            "tech": ["Go", "PostgreSQL", "Redis", "Temporal"],
+            "tech": [
+              "Go",
+              "PostgreSQL",
+              "Redis",
+              "Temporal"
+            ],
             "dataset": null,
             "interview_angle": "Walk through state machine design and failure retries."
           },
           {
             "title": "Merchant Payout Simulation Engine",
             "why": "Demonstrates financial workflows and correctness over asynchronous jobs.",
-            "tech": ["Python", "Celery", "PostgreSQL", "FastAPI"],
+            "tech": [
+              "Python",
+              "Celery",
+              "PostgreSQL",
+              "FastAPI"
+            ],
             "dataset": "Synthetic transactions dataset",
             "interview_angle": "Explain reconciliation guarantees and data consistency approach."
           },
           {
             "title": "API Versioning Gateway",
             "why": "Signals developer empathy and long-term API evolution discipline.",
-            "tech": ["Node.js", "TypeScript", "OpenAPI", "Nginx"],
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "OpenAPI",
+              "Nginx"
+            ],
             "dataset": null,
             "interview_angle": "Discuss migration strategy for existing clients with zero downtime."
           }
@@ -625,8 +775,7 @@
         "framing_tip": "Emphasize trust: money movement systems win when they are correct before they are flashy."
       }
     }
-  }
-  ,
+  },
   {
     "id": "microsoft",
     "name": "Microsoft",
@@ -636,18 +785,74 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["Cloud-native development", "Object-oriented design", "API engineering"],
-          "developing": ["Distributed systems debugging", "Identity and security patterns"],
-          "gap_risk": ["Large-scale telemetry", "Reliable release engineering"]
+          "strong": [
+            "Cloud-native development",
+            "Object-oriented design",
+            "API engineering"
+          ],
+          "developing": [
+            "Distributed systems debugging",
+            "Identity and security patterns"
+          ],
+          "gap_risk": [
+            "Large-scale telemetry",
+            "Reliable release engineering"
+          ]
         },
-        "jd_keywords": ["C#", "Java", "Python", "Azure", "REST APIs", "distributed systems", "testing", "agile"],
-        "top_projects": [
-          {"title":"Multi-tenant API Gateway","why":"Shows backend platform thinking and tenant isolation.","tech":["Node.js","TypeScript","PostgreSQL","Redis"],"dataset":null,"interview_angle":"Explain auth, rate limiting, and noisy-neighbor controls."},
-          {"title":"Cloud Cost Alert Service","why":"Maps to practical engineering impact on cloud teams.","tech":["Python","FastAPI","Azure Functions","Cosmos DB"],"dataset":"Azure pricing dataset","interview_angle":"Walk through alert thresholds and false positive tradeoffs."},
-          {"title":"Teams Activity Insights Dashboard","why":"Shows collaboration-product analytics and signal-to-noise judgment.","tech":["React","Node.js","PostgreSQL","Chart.js"],"dataset":"Synthetic collaboration events","interview_angle":"Focus on which metric changed team behavior."}
+        "jd_keywords": [
+          "C#",
+          "Java",
+          "Python",
+          "Azure",
+          "REST APIs",
+          "distributed systems",
+          "testing",
+          "agile"
         ],
-        "course_rec":{"title":"Azure Fundamentals","url":"https://learn.microsoft.com/training/paths/azure-fundamentals/","why":"Boosts cloud fluency expected for Microsoft SWE roles."},
-        "framing_tip":"Anchor your project stories on customer impact and engineering rigor."
+        "top_projects": [
+          {
+            "title": "Multi-tenant API Gateway",
+            "why": "Shows backend platform thinking and tenant isolation.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain auth, rate limiting, and noisy-neighbor controls."
+          },
+          {
+            "title": "Cloud Cost Alert Service",
+            "why": "Maps to practical engineering impact on cloud teams.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Azure Functions",
+              "Cosmos DB"
+            ],
+            "dataset": "Azure pricing dataset",
+            "interview_angle": "Walk through alert thresholds and false positive tradeoffs."
+          },
+          {
+            "title": "Teams Activity Insights Dashboard",
+            "why": "Shows collaboration-product analytics and signal-to-noise judgment.",
+            "tech": [
+              "React",
+              "Node.js",
+              "PostgreSQL",
+              "Chart.js"
+            ],
+            "dataset": "Synthetic collaboration events",
+            "interview_angle": "Focus on which metric changed team behavior."
+          }
+        ],
+        "course_rec": {
+          "title": "Azure Fundamentals",
+          "url": "https://learn.microsoft.com/training/paths/azure-fundamentals/",
+          "why": "Boosts cloud fluency expected for Microsoft SWE roles."
+        },
+        "framing_tip": "Anchor your project stories on customer impact and engineering rigor."
       }
     }
   },
@@ -660,18 +865,74 @@
       "swe-intern": {
         "title": "Software Engineer Intern",
         "signals": {
-          "strong": ["Systems thinking", "Product-minded feature execution", "Strong data structures"],
-          "developing": ["Performance profiling", "Large-scale experimentation"],
-          "gap_risk": ["Feed ranking systems", "Realtime infra reliability"]
+          "strong": [
+            "Systems thinking",
+            "Product-minded feature execution",
+            "Strong data structures"
+          ],
+          "developing": [
+            "Performance profiling",
+            "Large-scale experimentation"
+          ],
+          "gap_risk": [
+            "Feed ranking systems",
+            "Realtime infra reliability"
+          ]
         },
-        "jd_keywords": ["C++", "Java", "Python", "data structures", "algorithms", "distributed systems", "product thinking", "testing"],
-        "top_projects": [
-          {"title":"Realtime Group Chat Service","why":"Mirrors messaging reliability and concurrency tradeoffs.","tech":["Go","WebSockets","Redis","PostgreSQL"],"dataset":null,"interview_angle":"Discuss ordering, delivery guarantees, and latency tradeoffs."},
-          {"title":"Social Feed Ranking Prototype","why":"Shows ranking + product signal relevance.","tech":["Python","Pandas","scikit-learn","FastAPI"],"dataset":"Kaggle social recommendation dataset","interview_angle":"Explain ranking metrics and feedback loops."},
-          {"title":"A/B Experiment Platform","why":"Maps directly to Meta product iteration culture.","tech":["Node.js","TypeScript","PostgreSQL","React"],"dataset":null,"interview_angle":"Focus on experiment guardrails and launch confidence."}
+        "jd_keywords": [
+          "C++",
+          "Java",
+          "Python",
+          "data structures",
+          "algorithms",
+          "distributed systems",
+          "product thinking",
+          "testing"
         ],
-        "course_rec":{"title":"Systems Design Primer","url":"https://github.com/donnemartin/system-design-primer","why":"Strengthens practical architecture communication."},
-        "framing_tip":"Tie every technical decision to product outcomes and iteration speed."
+        "top_projects": [
+          {
+            "title": "Realtime Group Chat Service",
+            "why": "Mirrors messaging reliability and concurrency tradeoffs.",
+            "tech": [
+              "Go",
+              "WebSockets",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss ordering, delivery guarantees, and latency tradeoffs."
+          },
+          {
+            "title": "Social Feed Ranking Prototype",
+            "why": "Shows ranking + product signal relevance.",
+            "tech": [
+              "Python",
+              "Pandas",
+              "scikit-learn",
+              "FastAPI"
+            ],
+            "dataset": "Kaggle social recommendation dataset",
+            "interview_angle": "Explain ranking metrics and feedback loops."
+          },
+          {
+            "title": "A/B Experiment Platform",
+            "why": "Maps directly to Meta product iteration culture.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "React"
+            ],
+            "dataset": null,
+            "interview_angle": "Focus on experiment guardrails and launch confidence."
+          }
+        ],
+        "course_rec": {
+          "title": "Systems Design Primer",
+          "url": "https://github.com/donnemartin/system-design-primer",
+          "why": "Strengthens practical architecture communication."
+        },
+        "framing_tip": "Tie every technical decision to product outcomes and iteration speed."
       }
     }
   },
@@ -684,18 +945,73 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["High-quality code craftsmanship", "Performance awareness", "Cross-platform engineering"],
-          "developing": ["Security-hardening", "OS-level integration"],
-          "gap_risk": ["Privacy-preserving systems", "Battery/performance optimization"]
+          "strong": [
+            "High-quality code craftsmanship",
+            "Performance awareness",
+            "Cross-platform engineering"
+          ],
+          "developing": [
+            "Security-hardening",
+            "OS-level integration"
+          ],
+          "gap_risk": [
+            "Privacy-preserving systems",
+            "Battery/performance optimization"
+          ]
         },
-        "jd_keywords": ["Swift", "Objective-C", "C++", "Python", "software engineering", "performance", "testing", "security"],
-        "top_projects": [
-          {"title":"On-device Notes Search","why":"Demonstrates privacy-friendly local inference and UX quality.","tech":["Swift","CoreData","SQLite","iOS"],"dataset":null,"interview_angle":"Explain offline-first design and performance tuning."},
-          {"title":"Image Compression Benchmark Tool","why":"Shows systems-level optimization mindset.","tech":["C++","Python","CLI"],"dataset":"Open Images subset","interview_angle":"Share benchmark design and tradeoffs measured."},
-          {"title":"Secure File Sync Service","why":"Signals attention to encryption and reliability.","tech":["Swift","Node.js","PostgreSQL","AES"],"dataset":null,"interview_angle":"Discuss threat model and key management choices."}
+        "jd_keywords": [
+          "Swift",
+          "Objective-C",
+          "C++",
+          "Python",
+          "software engineering",
+          "performance",
+          "testing",
+          "security"
         ],
-        "course_rec":{"title":"iOS App Development with Swift","url":"https://developer.apple.com/tutorials/app-dev-training","why":"Aligns with Apple platform engineering expectations."},
-        "framing_tip":"Emphasize quality, privacy, and polish over feature count."
+        "top_projects": [
+          {
+            "title": "On-device Notes Search",
+            "why": "Demonstrates privacy-friendly local inference and UX quality.",
+            "tech": [
+              "Swift",
+              "CoreData",
+              "SQLite",
+              "iOS"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain offline-first design and performance tuning."
+          },
+          {
+            "title": "Image Compression Benchmark Tool",
+            "why": "Shows systems-level optimization mindset.",
+            "tech": [
+              "C++",
+              "Python",
+              "CLI"
+            ],
+            "dataset": "Open Images subset",
+            "interview_angle": "Share benchmark design and tradeoffs measured."
+          },
+          {
+            "title": "Secure File Sync Service",
+            "why": "Signals attention to encryption and reliability.",
+            "tech": [
+              "Swift",
+              "Node.js",
+              "PostgreSQL",
+              "AES"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss threat model and key management choices."
+          }
+        ],
+        "course_rec": {
+          "title": "iOS App Development with Swift",
+          "url": "https://developer.apple.com/tutorials/app-dev-training",
+          "why": "Aligns with Apple platform engineering expectations."
+        },
+        "framing_tip": "Emphasize quality, privacy, and polish over feature count."
       }
     }
   },
@@ -708,18 +1024,73 @@
       "swe-intern": {
         "title": "Software Engineer Intern",
         "signals": {
-          "strong": ["Distributed systems", "Observability", "Data-informed product decisions"],
-          "developing": ["Chaos testing", "Streaming pipelines"],
-          "gap_risk": ["Global reliability engineering", "Recommendation platform scale"]
+          "strong": [
+            "Distributed systems",
+            "Observability",
+            "Data-informed product decisions"
+          ],
+          "developing": [
+            "Chaos testing",
+            "Streaming pipelines"
+          ],
+          "gap_risk": [
+            "Global reliability engineering",
+            "Recommendation platform scale"
+          ]
         },
-        "jd_keywords": ["Java", "Kotlin", "Python", "distributed systems", "cloud", "microservices", "monitoring", "A/B testing"],
-        "top_projects": [
-          {"title":"Video Recommendation Service","why":"Mirrors core personalization signals.","tech":["Python","FastAPI","Redis","PostgreSQL"],"dataset":"MovieLens 25M","interview_angle":"Frame cold-start and relevance tradeoffs."},
-          {"title":"Service Reliability Dashboard","why":"Shows production health and incident response mindset.","tech":["TypeScript","Prometheus","Grafana","React"],"dataset":null,"interview_angle":"Walk through SLO selection and alert fatigue prevention."},
-          {"title":"Content Delivery Cache Simulator","why":"Signals edge and performance intuition.","tech":["Go","Redis","Docker"],"dataset":"Synthetic video request traces","interview_angle":"Discuss cache hit rate versus freshness."}
+        "jd_keywords": [
+          "Java",
+          "Kotlin",
+          "Python",
+          "distributed systems",
+          "cloud",
+          "microservices",
+          "monitoring",
+          "A/B testing"
         ],
-        "course_rec":{"title":"Site Reliability Engineering Book","url":"https://sre.google/sre-book/table-of-contents/","why":"Improves reliability vocabulary expected for scale-heavy teams."},
-        "framing_tip":"Demonstrate ownership in ambiguous production scenarios."
+        "top_projects": [
+          {
+            "title": "Video Recommendation Service",
+            "why": "Mirrors core personalization signals.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": "MovieLens 25M",
+            "interview_angle": "Frame cold-start and relevance tradeoffs."
+          },
+          {
+            "title": "Service Reliability Dashboard",
+            "why": "Shows production health and incident response mindset.",
+            "tech": [
+              "TypeScript",
+              "Prometheus",
+              "Grafana",
+              "React"
+            ],
+            "dataset": null,
+            "interview_angle": "Walk through SLO selection and alert fatigue prevention."
+          },
+          {
+            "title": "Content Delivery Cache Simulator",
+            "why": "Signals edge and performance intuition.",
+            "tech": [
+              "Go",
+              "Redis",
+              "Docker"
+            ],
+            "dataset": "Synthetic video request traces",
+            "interview_angle": "Discuss cache hit rate versus freshness."
+          }
+        ],
+        "course_rec": {
+          "title": "Site Reliability Engineering Book",
+          "url": "https://sre.google/sre-book/table-of-contents/",
+          "why": "Improves reliability vocabulary expected for scale-heavy teams."
+        },
+        "framing_tip": "Demonstrate ownership in ambiguous production scenarios."
       }
     }
   },
@@ -732,18 +1103,72 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["Performance engineering", "Parallel computing basics", "C++ proficiency"],
-          "developing": ["GPU acceleration workflows", "ML systems integration"],
-          "gap_risk": ["Low-level optimization", "Profiling at scale"]
+          "strong": [
+            "Performance engineering",
+            "Parallel computing basics",
+            "C++ proficiency"
+          ],
+          "developing": [
+            "GPU acceleration workflows",
+            "ML systems integration"
+          ],
+          "gap_risk": [
+            "Low-level optimization",
+            "Profiling at scale"
+          ]
         },
-        "jd_keywords": ["C++", "Python", "CUDA", "machine learning", "parallel computing", "performance", "Linux"],
-        "top_projects": [
-          {"title":"GPU Image Processing Pipeline","why":"Directly signals parallel optimization capability.","tech":["Python","CUDA","NumPy"],"dataset":"COCO subset","interview_angle":"Explain speedup measurement and bottleneck analysis."},
-          {"title":"Model Inference Benchmark CLI","why":"Shows systems + ML deployment judgment.","tech":["Python","PyTorch","ONNX","Docker"],"dataset":"ImageNet subset","interview_angle":"Compare latency and throughput under constraints."},
-          {"title":"Vector Search Recommender","why":"Signals retrieval relevance and performance.","tech":["Python","FAISS","FastAPI","PostgreSQL"],"dataset":"Amazon product reviews","interview_angle":"Discuss recall-latency tradeoffs."}
+        "jd_keywords": [
+          "C++",
+          "Python",
+          "CUDA",
+          "machine learning",
+          "parallel computing",
+          "performance",
+          "Linux"
         ],
-        "course_rec":{"title":"Intro to CUDA Programming","url":"https://developer.nvidia.com/cuda-training","why":"Directly aligned with NVIDIA engineering tooling."},
-        "framing_tip":"Quantify performance wins with clear before/after metrics."
+        "top_projects": [
+          {
+            "title": "GPU Image Processing Pipeline",
+            "why": "Directly signals parallel optimization capability.",
+            "tech": [
+              "Python",
+              "CUDA",
+              "NumPy"
+            ],
+            "dataset": "COCO subset",
+            "interview_angle": "Explain speedup measurement and bottleneck analysis."
+          },
+          {
+            "title": "Model Inference Benchmark CLI",
+            "why": "Shows systems + ML deployment judgment.",
+            "tech": [
+              "Python",
+              "PyTorch",
+              "ONNX",
+              "Docker"
+            ],
+            "dataset": "ImageNet subset",
+            "interview_angle": "Compare latency and throughput under constraints."
+          },
+          {
+            "title": "Vector Search Recommender",
+            "why": "Signals retrieval relevance and performance.",
+            "tech": [
+              "Python",
+              "FAISS",
+              "FastAPI",
+              "PostgreSQL"
+            ],
+            "dataset": "Amazon product reviews",
+            "interview_angle": "Discuss recall-latency tradeoffs."
+          }
+        ],
+        "course_rec": {
+          "title": "Intro to CUDA Programming",
+          "url": "https://developer.nvidia.com/cuda-training",
+          "why": "Directly aligned with NVIDIA engineering tooling."
+        },
+        "framing_tip": "Quantify performance wins with clear before/after metrics."
       }
     }
   },
@@ -756,18 +1181,73 @@
       "swe-intern": {
         "title": "Software Engineer Intern",
         "signals": {
-          "strong": ["Cloud backend delivery", "Secure software practices", "Data-driven product thinking"],
-          "developing": ["Event-driven architecture", "Fraud/risk system intuition"],
-          "gap_risk": ["Regulatory-grade auditing", "Operational resilience"]
+          "strong": [
+            "Cloud backend delivery",
+            "Secure software practices",
+            "Data-driven product thinking"
+          ],
+          "developing": [
+            "Event-driven architecture",
+            "Fraud/risk system intuition"
+          ],
+          "gap_risk": [
+            "Regulatory-grade auditing",
+            "Operational resilience"
+          ]
         },
-        "jd_keywords": ["Java", "Python", "AWS", "microservices", "REST APIs", "Agile", "SQL", "testing"],
-        "top_projects": [
-          {"title":"Card Spend Insights API","why":"Shows fintech analytics and backend judgment.","tech":["Java","Spring Boot","PostgreSQL","Redis"],"dataset":"Synthetic card transactions","interview_angle":"Explain spending categorization and anomaly edge cases."},
-          {"title":"Fraud Rule Engine","why":"Signals risk-focused product impact.","tech":["Python","FastAPI","Kafka","PostgreSQL"],"dataset":"Credit Card Fraud Detection (Kaggle)","interview_angle":"Discuss false-positive cost and review flow."},
-          {"title":"Secure Feature Flag Service","why":"Demonstrates controlled rollouts for regulated products.","tech":["Node.js","TypeScript","PostgreSQL"],"dataset":null,"interview_angle":"Talk through permissions and rollback controls."}
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "AWS",
+          "microservices",
+          "REST APIs",
+          "Agile",
+          "SQL",
+          "testing"
         ],
-        "course_rec":{"title":"AWS Developer Learning Path","url":"https://aws.amazon.com/training/learn-about/developer/","why":"Reinforces cloud patterns used in Capital One engineering."},
-        "framing_tip":"Highlight reliability and trust impact, not just feature delivery."
+        "top_projects": [
+          {
+            "title": "Card Spend Insights API",
+            "why": "Shows fintech analytics and backend judgment.",
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": "Synthetic card transactions",
+            "interview_angle": "Explain spending categorization and anomaly edge cases."
+          },
+          {
+            "title": "Fraud Rule Engine",
+            "why": "Signals risk-focused product impact.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Kafka",
+              "PostgreSQL"
+            ],
+            "dataset": "Credit Card Fraud Detection (Kaggle)",
+            "interview_angle": "Discuss false-positive cost and review flow."
+          },
+          {
+            "title": "Secure Feature Flag Service",
+            "why": "Demonstrates controlled rollouts for regulated products.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Talk through permissions and rollback controls."
+          }
+        ],
+        "course_rec": {
+          "title": "AWS Developer Learning Path",
+          "url": "https://aws.amazon.com/training/learn-about/developer/",
+          "why": "Reinforces cloud patterns used in Capital One engineering."
+        },
+        "framing_tip": "Highlight reliability and trust impact, not just feature delivery."
       }
     }
   },
@@ -780,18 +1260,73 @@
       "swe-intern": {
         "title": "Software Engineer Intern",
         "signals": {
-          "strong": ["Customer-facing product delivery", "Backend API craftsmanship", "Testing discipline"],
-          "developing": ["Insurance workflow modeling", "Cloud observability"],
-          "gap_risk": ["Claims lifecycle automation", "Reliability during peak events"]
+          "strong": [
+            "Customer-facing product delivery",
+            "Backend API craftsmanship",
+            "Testing discipline"
+          ],
+          "developing": [
+            "Insurance workflow modeling",
+            "Cloud observability"
+          ],
+          "gap_risk": [
+            "Claims lifecycle automation",
+            "Reliability during peak events"
+          ]
         },
-        "jd_keywords": ["Java", "C#", "React", "REST APIs", "SQL", "testing", "cloud", "Agile"],
-        "top_projects": [
-          {"title":"Claims Triage Assistant","why":"Mirrors insurance intake workflows and user impact.","tech":["React","Node.js","PostgreSQL"],"dataset":"Insurance claims dataset","interview_angle":"Explain triage logic and fairness checks."},
-          {"title":"Policy Quote Comparison Tool","why":"Signals pricing/product understanding.","tech":["Python","FastAPI","Redis","React"],"dataset":"Auto insurance quote dataset","interview_angle":"Discuss explainability and user trust."},
-          {"title":"Agent Follow-up Automation","why":"Shows operational efficiency design.","tech":["TypeScript","Node.js","Cron","PostgreSQL"],"dataset":null,"interview_angle":"Frame around reduced customer response time."}
+        "jd_keywords": [
+          "Java",
+          "C#",
+          "React",
+          "REST APIs",
+          "SQL",
+          "testing",
+          "cloud",
+          "Agile"
         ],
-        "course_rec":{"title":"Clean Code","url":"https://www.oreilly.com/library/view/clean-code-a/9780136083238/","why":"Progressive teams value maintainable enterprise codebases."},
-        "framing_tip":"Frame your projects as customer outcomes plus reliable execution."
+        "top_projects": [
+          {
+            "title": "Claims Triage Assistant",
+            "why": "Mirrors insurance intake workflows and user impact.",
+            "tech": [
+              "React",
+              "Node.js",
+              "PostgreSQL"
+            ],
+            "dataset": "Insurance claims dataset",
+            "interview_angle": "Explain triage logic and fairness checks."
+          },
+          {
+            "title": "Policy Quote Comparison Tool",
+            "why": "Signals pricing/product understanding.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Redis",
+              "React"
+            ],
+            "dataset": "Auto insurance quote dataset",
+            "interview_angle": "Discuss explainability and user trust."
+          },
+          {
+            "title": "Agent Follow-up Automation",
+            "why": "Shows operational efficiency design.",
+            "tech": [
+              "TypeScript",
+              "Node.js",
+              "Cron",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Frame around reduced customer response time."
+          }
+        ],
+        "course_rec": {
+          "title": "Clean Code",
+          "url": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/",
+          "why": "Progressive teams value maintainable enterprise codebases."
+        },
+        "framing_tip": "Frame your projects as customer outcomes plus reliable execution."
       }
     }
   },
@@ -804,18 +1339,73 @@
       "swe-intern": {
         "title": "Software Engineer Intern",
         "signals": {
-          "strong": ["Mission-driven product focus", "Secure engineering fundamentals", "Backend integration skills"],
-          "developing": ["Enterprise service integration", "Cloud reliability patterns"],
-          "gap_risk": ["Compliance automation", "Identity/security depth"]
+          "strong": [
+            "Mission-driven product focus",
+            "Secure engineering fundamentals",
+            "Backend integration skills"
+          ],
+          "developing": [
+            "Enterprise service integration",
+            "Cloud reliability patterns"
+          ],
+          "gap_risk": [
+            "Compliance automation",
+            "Identity/security depth"
+          ]
         },
-        "jd_keywords": ["Java", "Python", "AWS", "REST APIs", "microservices", "security", "SQL", "testing"],
-        "top_projects": [
-          {"title":"Member Support Routing API","why":"Shows practical service design and support workflow impact.","tech":["Java","Spring Boot","PostgreSQL"],"dataset":"Synthetic support tickets","interview_angle":"Discuss prioritization and SLA tradeoffs."},
-          {"title":"Secure Document Intake","why":"Signals security-first engineering for sensitive data.","tech":["Node.js","TypeScript","S3","PostgreSQL"],"dataset":null,"interview_angle":"Walk through encryption and access controls."},
-          {"title":"Claims Status Notification Service","why":"Demonstrates reliability and customer communication quality.","tech":["Python","FastAPI","Redis","Twilio"],"dataset":null,"interview_angle":"Explain retries and delivery guarantees."}
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "AWS",
+          "REST APIs",
+          "microservices",
+          "security",
+          "SQL",
+          "testing"
         ],
-        "course_rec":{"title":"OWASP Top 10","url":"https://owasp.org/www-project-top-ten/","why":"Improves practical secure coding choices for financial systems."},
-        "framing_tip":"Connect your engineering work to trust, security, and member outcomes."
+        "top_projects": [
+          {
+            "title": "Member Support Routing API",
+            "why": "Shows practical service design and support workflow impact.",
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "PostgreSQL"
+            ],
+            "dataset": "Synthetic support tickets",
+            "interview_angle": "Discuss prioritization and SLA tradeoffs."
+          },
+          {
+            "title": "Secure Document Intake",
+            "why": "Signals security-first engineering for sensitive data.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "S3",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Walk through encryption and access controls."
+          },
+          {
+            "title": "Claims Status Notification Service",
+            "why": "Demonstrates reliability and customer communication quality.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Redis",
+              "Twilio"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain retries and delivery guarantees."
+          }
+        ],
+        "course_rec": {
+          "title": "OWASP Top 10",
+          "url": "https://owasp.org/www-project-top-ten/",
+          "why": "Improves practical secure coding choices for financial systems."
+        },
+        "framing_tip": "Connect your engineering work to trust, security, and member outcomes."
       }
     }
   },
@@ -828,18 +1418,73 @@
       "swe-intern": {
         "title": "Software Engineer Intern",
         "signals": {
-          "strong": ["Backend systems engineering", "Data processing rigor", "Team collaboration"],
-          "developing": ["Trading platform reliability", "Event streaming systems"],
-          "gap_risk": ["Low-latency architecture", "Risk data lineage"]
+          "strong": [
+            "Backend systems engineering",
+            "Data processing rigor",
+            "Team collaboration"
+          ],
+          "developing": [
+            "Trading platform reliability",
+            "Event streaming systems"
+          ],
+          "gap_risk": [
+            "Low-latency architecture",
+            "Risk data lineage"
+          ]
         },
-        "jd_keywords": ["Java", "Python", "microservices", "cloud", "SQL", "distributed systems", "Agile", "testing"],
-        "top_projects": [
-          {"title":"Trade Event Processing Service","why":"Mirrors asynchronous financial system workflows.","tech":["Java","Kafka","PostgreSQL"],"dataset":"Synthetic trade events","interview_angle":"Explain ordering guarantees and reconciliation."},
-          {"title":"Portfolio Risk Heatmap API","why":"Signals finance + backend integration skills.","tech":["Python","FastAPI","Pandas","PostgreSQL"],"dataset":"Fama-French factors","interview_angle":"Discuss risk metric interpretation and caveats."},
-          {"title":"Settlement Alert Pipeline","why":"Shows operational reliability and business urgency.","tech":["Node.js","TypeScript","Redis","BullMQ"],"dataset":null,"interview_angle":"Frame around incident prevention and visibility."}
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "microservices",
+          "cloud",
+          "SQL",
+          "distributed systems",
+          "Agile",
+          "testing"
         ],
-        "course_rec":{"title":"Financial Markets","url":"https://www.coursera.org/learn/financial-markets-global","why":"Improves finance context for stronger project framing."},
-        "framing_tip":"Prioritize correctness, auditability, and controlled failure handling."
+        "top_projects": [
+          {
+            "title": "Trade Event Processing Service",
+            "why": "Mirrors asynchronous financial system workflows.",
+            "tech": [
+              "Java",
+              "Kafka",
+              "PostgreSQL"
+            ],
+            "dataset": "Synthetic trade events",
+            "interview_angle": "Explain ordering guarantees and reconciliation."
+          },
+          {
+            "title": "Portfolio Risk Heatmap API",
+            "why": "Signals finance + backend integration skills.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Pandas",
+              "PostgreSQL"
+            ],
+            "dataset": "Fama-French factors",
+            "interview_angle": "Discuss risk metric interpretation and caveats."
+          },
+          {
+            "title": "Settlement Alert Pipeline",
+            "why": "Shows operational reliability and business urgency.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "Redis",
+              "BullMQ"
+            ],
+            "dataset": null,
+            "interview_angle": "Frame around incident prevention and visibility."
+          }
+        ],
+        "course_rec": {
+          "title": "Financial Markets",
+          "url": "https://www.coursera.org/learn/financial-markets-global",
+          "why": "Improves finance context for stronger project framing."
+        },
+        "framing_tip": "Prioritize correctness, auditability, and controlled failure handling."
       }
     }
   },
@@ -852,18 +1497,72 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["Enterprise SaaS architecture", "API-first development", "Customer-focused UX execution"],
-          "developing": ["Multi-tenant performance", "Observability maturity"],
-          "gap_risk": ["Large org-level data modeling", "Platform extensibility patterns"]
+          "strong": [
+            "Enterprise SaaS architecture",
+            "API-first development",
+            "Customer-focused UX execution"
+          ],
+          "developing": [
+            "Multi-tenant performance",
+            "Observability maturity"
+          ],
+          "gap_risk": [
+            "Large org-level data modeling",
+            "Platform extensibility patterns"
+          ]
         },
-        "jd_keywords": ["Java", "Apex", "JavaScript", "REST APIs", "SOQL", "cloud", "testing", "Agile"],
-        "top_projects": [
-          {"title":"Tenant-aware CRM API","why":"Signals enterprise multi-tenant backend design.","tech":["Node.js","TypeScript","PostgreSQL"],"dataset":"Synthetic CRM records","interview_angle":"Discuss tenant isolation and query performance."},
-          {"title":"Lead Scoring Dashboard","why":"Maps directly to CRM workflow impact.","tech":["React","Python","FastAPI","PostgreSQL"],"dataset":"Lead conversion dataset","interview_angle":"Explain scoring assumptions and sales workflow impact."},
-          {"title":"Webhook Integration Orchestrator","why":"Shows platform integration and reliability thinking.","tech":["Go","Redis","PostgreSQL"],"dataset":null,"interview_angle":"Cover retries, idempotency, and failure visibility."}
+        "jd_keywords": [
+          "Java",
+          "Apex",
+          "JavaScript",
+          "REST APIs",
+          "SOQL",
+          "cloud",
+          "testing",
+          "Agile"
         ],
-        "course_rec":{"title":"Salesforce Developer Beginner","url":"https://trailhead.salesforce.com/","why":"Adds platform context that strengthens role alignment."},
-        "framing_tip":"Frame your projects around customer success and platform reliability."
+        "top_projects": [
+          {
+            "title": "Tenant-aware CRM API",
+            "why": "Signals enterprise multi-tenant backend design.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL"
+            ],
+            "dataset": "Synthetic CRM records",
+            "interview_angle": "Discuss tenant isolation and query performance."
+          },
+          {
+            "title": "Lead Scoring Dashboard",
+            "why": "Maps directly to CRM workflow impact.",
+            "tech": [
+              "React",
+              "Python",
+              "FastAPI",
+              "PostgreSQL"
+            ],
+            "dataset": "Lead conversion dataset",
+            "interview_angle": "Explain scoring assumptions and sales workflow impact."
+          },
+          {
+            "title": "Webhook Integration Orchestrator",
+            "why": "Shows platform integration and reliability thinking.",
+            "tech": [
+              "Go",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Cover retries, idempotency, and failure visibility."
+          }
+        ],
+        "course_rec": {
+          "title": "Salesforce Developer Beginner",
+          "url": "https://trailhead.salesforce.com/",
+          "why": "Adds platform context that strengthens role alignment."
+        },
+        "framing_tip": "Frame your projects around customer success and platform reliability."
       }
     }
   },
@@ -876,18 +1575,72 @@
       "swe-intern": {
         "title": "Software Engineer Intern",
         "signals": {
-          "strong": ["Backend systems for telemetry", "Performance debugging", "Developer tooling mindset"],
-          "developing": ["High-cardinality data handling", "Query engine design"],
-          "gap_risk": ["Large-scale metrics ingestion", "Distributed tracing internals"]
+          "strong": [
+            "Backend systems for telemetry",
+            "Performance debugging",
+            "Developer tooling mindset"
+          ],
+          "developing": [
+            "High-cardinality data handling",
+            "Query engine design"
+          ],
+          "gap_risk": [
+            "Large-scale metrics ingestion",
+            "Distributed tracing internals"
+          ]
         },
-        "jd_keywords": ["Go", "Python", "Java", "distributed systems", "monitoring", "Kubernetes", "cloud", "performance"],
-        "top_projects": [
-          {"title":"Metrics Ingestion Gateway","why":"Directly mirrors observability pipeline work.","tech":["Go","Kafka","PostgreSQL","Redis"],"dataset":"Synthetic service metrics","interview_angle":"Discuss sampling and ingestion backpressure."},
-          {"title":"Trace Explorer UI","why":"Shows end-to-end developer observability UX.","tech":["React","TypeScript","Node.js"],"dataset":"OpenTelemetry sample traces","interview_angle":"Explain cardinality tradeoffs in trace queries."},
-          {"title":"Incident Correlation Engine","why":"Signals systems thinking for root-cause analysis.","tech":["Python","FastAPI","scikit-learn"],"dataset":"Synthetic incident logs","interview_angle":"Frame precision/recall tradeoffs for alerts."}
+        "jd_keywords": [
+          "Go",
+          "Python",
+          "Java",
+          "distributed systems",
+          "monitoring",
+          "Kubernetes",
+          "cloud",
+          "performance"
         ],
-        "course_rec":{"title":"OpenTelemetry Fundamentals","url":"https://opentelemetry.io/docs/","why":"Builds telemetry vocabulary expected at Datadog."},
-        "framing_tip":"Lead with debugging speed improvements your system enabled."
+        "top_projects": [
+          {
+            "title": "Metrics Ingestion Gateway",
+            "why": "Directly mirrors observability pipeline work.",
+            "tech": [
+              "Go",
+              "Kafka",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": "Synthetic service metrics",
+            "interview_angle": "Discuss sampling and ingestion backpressure."
+          },
+          {
+            "title": "Trace Explorer UI",
+            "why": "Shows end-to-end developer observability UX.",
+            "tech": [
+              "React",
+              "TypeScript",
+              "Node.js"
+            ],
+            "dataset": "OpenTelemetry sample traces",
+            "interview_angle": "Explain cardinality tradeoffs in trace queries."
+          },
+          {
+            "title": "Incident Correlation Engine",
+            "why": "Signals systems thinking for root-cause analysis.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "scikit-learn"
+            ],
+            "dataset": "Synthetic incident logs",
+            "interview_angle": "Frame precision/recall tradeoffs for alerts."
+          }
+        ],
+        "course_rec": {
+          "title": "OpenTelemetry Fundamentals",
+          "url": "https://opentelemetry.io/docs/",
+          "why": "Builds telemetry vocabulary expected at Datadog."
+        },
+        "framing_tip": "Lead with debugging speed improvements your system enabled."
       }
     }
   },
@@ -900,18 +1653,71 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["Systems programming fundamentals", "Performance tuning", "Toolchain fluency"],
-          "developing": ["Firmware-adjacent workflows", "Automation for validation"],
-          "gap_risk": ["Low-level profiling depth", "Hardware-software integration"]
+          "strong": [
+            "Systems programming fundamentals",
+            "Performance tuning",
+            "Toolchain fluency"
+          ],
+          "developing": [
+            "Firmware-adjacent workflows",
+            "Automation for validation"
+          ],
+          "gap_risk": [
+            "Low-level profiling depth",
+            "Hardware-software integration"
+          ]
         },
-        "jd_keywords": ["C", "C++", "Python", "Linux", "automation", "performance", "debugging", "testing"],
-        "top_projects": [
-          {"title":"Benchmark Automation Harness","why":"Signals practical performance engineering mindset.","tech":["Python","Bash","Linux"],"dataset":"Synthetic benchmark traces","interview_angle":"Explain repeatability and variance controls."},
-          {"title":"Compiler Optimization Visualizer","why":"Shows systems-level understanding and tooling UX.","tech":["C++","Python","React"],"dataset":null,"interview_angle":"Discuss tradeoffs between optimization levels."},
-          {"title":"Device Telemetry Collector","why":"Demonstrates low-level observability and reliability.","tech":["Go","SQLite","CLI"],"dataset":"Synthetic hardware telemetry","interview_angle":"Frame design for constrained environments."}
+        "jd_keywords": [
+          "C",
+          "C++",
+          "Python",
+          "Linux",
+          "automation",
+          "performance",
+          "debugging",
+          "testing"
         ],
-        "course_rec":{"title":"Computer Systems: A Programmer's Perspective","url":"https://csapp.cs.cmu.edu/","why":"Strengthens systems depth aligned with Intel roles."},
-        "framing_tip":"Quantify performance and reliability outcomes in concrete numbers."
+        "top_projects": [
+          {
+            "title": "Benchmark Automation Harness",
+            "why": "Signals practical performance engineering mindset.",
+            "tech": [
+              "Python",
+              "Bash",
+              "Linux"
+            ],
+            "dataset": "Synthetic benchmark traces",
+            "interview_angle": "Explain repeatability and variance controls."
+          },
+          {
+            "title": "Compiler Optimization Visualizer",
+            "why": "Shows systems-level understanding and tooling UX.",
+            "tech": [
+              "C++",
+              "Python",
+              "React"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss tradeoffs between optimization levels."
+          },
+          {
+            "title": "Device Telemetry Collector",
+            "why": "Demonstrates low-level observability and reliability.",
+            "tech": [
+              "Go",
+              "SQLite",
+              "CLI"
+            ],
+            "dataset": "Synthetic hardware telemetry",
+            "interview_angle": "Frame design for constrained environments."
+          }
+        ],
+        "course_rec": {
+          "title": "Computer Systems: A Programmer's Perspective",
+          "url": "https://csapp.cs.cmu.edu/",
+          "why": "Strengthens systems depth aligned with Intel roles."
+        },
+        "framing_tip": "Quantify performance and reliability outcomes in concrete numbers."
       }
     }
   },
@@ -924,18 +1730,70 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["Reliable systems engineering", "IoT/edge workflow understanding", "Safety-aware development"],
-          "developing": ["Operational analytics", "Cloud-edge integration"],
-          "gap_risk": ["Industrial protocol familiarity", "Safety-critical validation"]
+          "strong": [
+            "Reliable systems engineering",
+            "IoT/edge workflow understanding",
+            "Safety-aware development"
+          ],
+          "developing": [
+            "Operational analytics",
+            "Cloud-edge integration"
+          ],
+          "gap_risk": [
+            "Industrial protocol familiarity",
+            "Safety-critical validation"
+          ]
         },
-        "jd_keywords": ["C++", "Python", "IoT", "cloud", "embedded systems", "testing", "data analysis"],
-        "top_projects": [
-          {"title":"Sensor Alert Pipeline","why":"Mirrors industrial monitoring workflows.","tech":["Python","MQTT","PostgreSQL"],"dataset":"IoT telemetry dataset","interview_angle":"Discuss threshold tuning and alert quality."},
-          {"title":"Edge Device Health Dashboard","why":"Signals operational observability in physical systems.","tech":["React","Node.js","InfluxDB"],"dataset":"Synthetic device health events","interview_angle":"Explain actionable metrics selection."},
-          {"title":"Predictive Maintenance Classifier","why":"Connects ML to real industrial outcomes.","tech":["Python","scikit-learn","FastAPI"],"dataset":"NASA Turbofan Engine Degradation","interview_angle":"Frame false alarms vs missed failures."}
+        "jd_keywords": [
+          "C++",
+          "Python",
+          "IoT",
+          "cloud",
+          "embedded systems",
+          "testing",
+          "data analysis"
         ],
-        "course_rec":{"title":"Industrial IoT on Google Cloud","url":"https://www.coursera.org/learn/fundamentals-of-iot","why":"Builds practical IoT architecture context."},
-        "framing_tip":"Focus on reliability and safety outcomes in your project stories."
+        "top_projects": [
+          {
+            "title": "Sensor Alert Pipeline",
+            "why": "Mirrors industrial monitoring workflows.",
+            "tech": [
+              "Python",
+              "MQTT",
+              "PostgreSQL"
+            ],
+            "dataset": "IoT telemetry dataset",
+            "interview_angle": "Discuss threshold tuning and alert quality."
+          },
+          {
+            "title": "Edge Device Health Dashboard",
+            "why": "Signals operational observability in physical systems.",
+            "tech": [
+              "React",
+              "Node.js",
+              "InfluxDB"
+            ],
+            "dataset": "Synthetic device health events",
+            "interview_angle": "Explain actionable metrics selection."
+          },
+          {
+            "title": "Predictive Maintenance Classifier",
+            "why": "Connects ML to real industrial outcomes.",
+            "tech": [
+              "Python",
+              "scikit-learn",
+              "FastAPI"
+            ],
+            "dataset": "NASA Turbofan Engine Degradation",
+            "interview_angle": "Frame false alarms vs missed failures."
+          }
+        ],
+        "course_rec": {
+          "title": "Industrial IoT on Google Cloud",
+          "url": "https://www.coursera.org/learn/fundamentals-of-iot",
+          "why": "Builds practical IoT architecture context."
+        },
+        "framing_tip": "Focus on reliability and safety outcomes in your project stories."
       }
     }
   },
@@ -948,18 +1806,72 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["Customer-facing web product delivery", "Backend API fundamentals", "Experimentation mindset"],
-          "developing": ["Platform reliability", "Billing/domain workflow logic"],
-          "gap_risk": ["Traffic surge resilience", "Search/ranking for domains"]
+          "strong": [
+            "Customer-facing web product delivery",
+            "Backend API fundamentals",
+            "Experimentation mindset"
+          ],
+          "developing": [
+            "Platform reliability",
+            "Billing/domain workflow logic"
+          ],
+          "gap_risk": [
+            "Traffic surge resilience",
+            "Search/ranking for domains"
+          ]
         },
-        "jd_keywords": ["JavaScript", "React", "Node.js", "REST APIs", "SQL", "cloud", "testing", "Agile"],
-        "top_projects": [
-          {"title":"Domain Suggestion API","why":"Maps directly to GoDaddy product primitives.","tech":["Node.js","TypeScript","PostgreSQL"],"dataset":"Word frequency + domain popularity","interview_angle":"Explain suggestion ranking and latency targets."},
-          {"title":"Website Template Recommender","why":"Signals SMB product relevance and UX personalization.","tech":["Python","FastAPI","scikit-learn","React"],"dataset":"Website templates metadata","interview_angle":"Discuss conversion-oriented recommendation choices."},
-          {"title":"Checkout Recovery Flow","why":"Shows growth/product engineering impact.","tech":["React","Node.js","Redis"],"dataset":"Synthetic checkout events","interview_angle":"Frame metrics improved and A/B plan."}
+        "jd_keywords": [
+          "JavaScript",
+          "React",
+          "Node.js",
+          "REST APIs",
+          "SQL",
+          "cloud",
+          "testing",
+          "Agile"
         ],
-        "course_rec":{"title":"Full-Stack Open","url":"https://fullstackopen.com/en/","why":"Reinforces practical modern web product engineering."},
-        "framing_tip":"Lead with user conversion or retention impact from your builds."
+        "top_projects": [
+          {
+            "title": "Domain Suggestion API",
+            "why": "Maps directly to GoDaddy product primitives.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL"
+            ],
+            "dataset": "Word frequency + domain popularity",
+            "interview_angle": "Explain suggestion ranking and latency targets."
+          },
+          {
+            "title": "Website Template Recommender",
+            "why": "Signals SMB product relevance and UX personalization.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "scikit-learn",
+              "React"
+            ],
+            "dataset": "Website templates metadata",
+            "interview_angle": "Discuss conversion-oriented recommendation choices."
+          },
+          {
+            "title": "Checkout Recovery Flow",
+            "why": "Shows growth/product engineering impact.",
+            "tech": [
+              "React",
+              "Node.js",
+              "Redis"
+            ],
+            "dataset": "Synthetic checkout events",
+            "interview_angle": "Frame metrics improved and A/B plan."
+          }
+        ],
+        "course_rec": {
+          "title": "Full-Stack Open",
+          "url": "https://fullstackopen.com/en/",
+          "why": "Reinforces practical modern web product engineering."
+        },
+        "framing_tip": "Lead with user conversion or retention impact from your builds."
       }
     }
   },
@@ -972,18 +1884,842 @@
       "swe-intern": {
         "title": "Software Engineering Intern",
         "signals": {
-          "strong": ["Mission-critical backend reliability", "Evidence-focused product thinking", "Secure data handling"],
-          "developing": ["Video/data pipeline optimization", "Compliance-aware access control"],
-          "gap_risk": ["Chain-of-custody workflows", "Realtime evidence search at scale"]
+          "strong": [
+            "Mission-critical backend reliability",
+            "Evidence-focused product thinking",
+            "Secure data handling"
+          ],
+          "developing": [
+            "Video/data pipeline optimization",
+            "Compliance-aware access control"
+          ],
+          "gap_risk": [
+            "Chain-of-custody workflows",
+            "Realtime evidence search at scale"
+          ]
         },
-        "jd_keywords": ["Java", "Python", "cloud", "distributed systems", "security", "REST APIs", "testing", "microservices"],
-        "top_projects": [
-          {"title":"Evidence Metadata Indexer","why":"Signals search + reliability concerns similar to Axon workflows.","tech":["Python","FastAPI","Elasticsearch","PostgreSQL"],"dataset":"Open police report metadata","interview_angle":"Discuss indexing accuracy and retrieval latency."},
-          {"title":"Audit-safe Access Log Service","why":"Demonstrates trust and compliance engineering mindset.","tech":["Go","PostgreSQL","Redis"],"dataset":null,"interview_angle":"Explain tamper resistance and immutable log design."},
-          {"title":"Incident Timeline Builder","why":"Shows product relevance for public safety context.","tech":["React","Node.js","TypeScript"],"dataset":"Synthetic incident event stream","interview_angle":"Frame around operator decision speed improvements."}
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "cloud",
+          "distributed systems",
+          "security",
+          "REST APIs",
+          "testing",
+          "microservices"
         ],
-        "course_rec":{"title":"Secure Coding Practices","url":"https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/","why":"Security posture is central for public safety tech products."},
-        "framing_tip":"Frame your work around trust, reliability, and high-stakes usability."
+        "top_projects": [
+          {
+            "title": "Evidence Metadata Indexer",
+            "why": "Signals search + reliability concerns similar to Axon workflows.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Elasticsearch",
+              "PostgreSQL"
+            ],
+            "dataset": "Open police report metadata",
+            "interview_angle": "Discuss indexing accuracy and retrieval latency."
+          },
+          {
+            "title": "Audit-safe Access Log Service",
+            "why": "Demonstrates trust and compliance engineering mindset.",
+            "tech": [
+              "Go",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain tamper resistance and immutable log design."
+          },
+          {
+            "title": "Incident Timeline Builder",
+            "why": "Shows product relevance for public safety context.",
+            "tech": [
+              "React",
+              "Node.js",
+              "TypeScript"
+            ],
+            "dataset": "Synthetic incident event stream",
+            "interview_angle": "Frame around operator decision speed improvements."
+          }
+        ],
+        "course_rec": {
+          "title": "Secure Coding Practices",
+          "url": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/",
+          "why": "Security posture is central for public safety tech products."
+        },
+        "framing_tip": "Frame your work around trust, reliability, and high-stakes usability."
+      }
+    }
+  },
+  {
+    "id": "palantir",
+    "name": "Palantir",
+    "tier": "Growth",
+    "industry": "tech",
+    "roles": {
+      "swe-intern": {
+        "title": "Software Engineer Intern",
+        "source_notes": [
+          "Palantir Careers — Software Engineer Intern postings (public JD summaries)",
+          "Engineering blog: building mission-critical data platforms"
+        ],
+        "signals": {
+          "strong": [
+            "Backend systems",
+            "Data modeling",
+            "Problem decomposition"
+          ],
+          "developing": [
+            "Ontology-driven product design",
+            "Customer deployment workflows"
+          ],
+          "gap_risk": [
+            "Large-scale data integration",
+            "Security clearance context"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "distributed systems",
+          "data structures",
+          "algorithms",
+          "SQL",
+          "cloud",
+          "Agile"
+        ],
+        "top_projects": [
+          {
+            "title": "Entity Resolution Pipeline",
+            "why": "Mirrors data fusion problems Palantir solves for customers.",
+            "tech": [
+              "Python",
+              "PostgreSQL",
+              "FastAPI",
+              "Pandas"
+            ],
+            "dataset": "OpenSanctions entities",
+            "interview_angle": "Explain deduplication strategy and data quality checks."
+          },
+          {
+            "title": "Investigation Timeline API",
+            "why": "Shows analyst workflow tooling and auditability.",
+            "tech": [
+              "TypeScript",
+              "Node.js",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss permissioning and traceability requirements."
+          },
+          {
+            "title": "Metrics Alerting Service",
+            "why": "Signals operational reliability for mission-critical systems.",
+            "tech": [
+              "Go",
+              "Prometheus",
+              "Grafana"
+            ],
+            "dataset": "Synthetic ops metrics",
+            "interview_angle": "Walk through alert noise reduction."
+          }
+        ],
+        "course_rec": {
+          "title": "Designing Data-Intensive Applications",
+          "url": "https://dataintensive.net/",
+          "why": "Strengthens data platform vocabulary used in Palantir interviews."
+        },
+        "framing_tip": "Frame projects around decision impact for real operators, not just technical novelty."
+      },
+      "fde-intern": {
+        "title": "Forward Deployed Engineer Intern",
+        "source_notes": [
+          "Palantir FDE internship descriptions (customer-facing engineering)",
+          "Interview guides emphasizing deployment + stakeholder communication"
+        ],
+        "signals": {
+          "strong": [
+            "Customer communication",
+            "Rapid prototyping",
+            "Technical troubleshooting"
+          ],
+          "developing": [
+            "Enterprise integration",
+            "Workflow customization"
+          ],
+          "gap_risk": [
+            "Production rollout discipline",
+            "Cross-team stakeholder alignment"
+          ]
+        },
+        "jd_keywords": [
+          "Python",
+          "SQL",
+          "customer-facing",
+          "problem solving",
+          "deployment",
+          "APIs",
+          "documentation"
+        ],
+        "top_projects": [
+          {
+            "title": "Client Onboarding Portal",
+            "why": "Demonstrates deployment mindset and user empathy.",
+            "tech": [
+              "React",
+              "Node.js",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Share how you reduced time-to-first-value for users."
+          },
+          {
+            "title": "Configurable ETL Adapter",
+            "why": "Shows integration flexibility for varied customer data.",
+            "tech": [
+              "Python",
+              "Airflow",
+              "PostgreSQL"
+            ],
+            "dataset": "Public CSV government datasets",
+            "interview_angle": "Explain schema mapping and validation approach."
+          },
+          {
+            "title": "Live Demo Reliability Kit",
+            "why": "Signals readiness for customer-facing demos under pressure.",
+            "tech": [
+              "Docker",
+              "bash",
+              "health checks"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss failure recovery during demos."
+          }
+        ],
+        "course_rec": {
+          "title": "Communicating for Impact",
+          "url": "https://www.coursera.org/learn/communication-impact",
+          "why": "FDE roles weight clarity with technical customers heavily."
+        },
+        "framing_tip": "Lead with a user problem, your deployment approach, and measurable customer outcome."
+      }
+    }
+  },
+  {
+    "id": "airbnb",
+    "name": "Airbnb",
+    "tier": "Growth",
+    "industry": "tech",
+    "roles": {
+      "swe-intern": {
+        "title": "Software Engineer Intern",
+        "source_notes": [
+          "Airbnb Careers — Software Engineer Intern (New Grad pathway JDs)",
+          "Tech blog posts on search, payments, and trust systems"
+        ],
+        "signals": {
+          "strong": [
+            "Full-stack delivery",
+            "Product sense",
+            "Reliable API design"
+          ],
+          "developing": [
+            "Experimentation culture",
+            "Marketplace dynamics"
+          ],
+          "gap_risk": [
+            "Search ranking at scale",
+            "Fraud/trust systems"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Ruby",
+          "JavaScript",
+          "React",
+          "distributed systems",
+          "SQL",
+          "testing",
+          "Agile"
+        ],
+        "top_projects": [
+          {
+            "title": "Listing Search Ranking Service",
+            "why": "Directly relevant to marketplace discovery.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Elasticsearch"
+            ],
+            "dataset": "Inside Airbnb listings sample",
+            "interview_angle": "Explain relevance vs latency tradeoffs."
+          },
+          {
+            "title": "Booking Availability API",
+            "why": "Shows concurrency and calendar conflict handling.",
+            "tech": [
+              "Node.js",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss race conditions and locking strategy."
+          },
+          {
+            "title": "Host Trust Score Dashboard",
+            "why": "Signals trust/safety product thinking.",
+            "tech": [
+              "React",
+              "TypeScript",
+              "PostgreSQL"
+            ],
+            "dataset": "Synthetic host review data",
+            "interview_angle": "Frame fairness and explainability choices."
+          }
+        ],
+        "course_rec": {
+          "title": "Web Application Security",
+          "url": "https://portswigger.net/web-security",
+          "why": "Trust marketplace products require security-aware engineering."
+        },
+        "framing_tip": "Tie technical decisions to guest/host experience and marketplace health."
+      },
+      "data-scientist-intern": {
+        "title": "Data Scientist Intern",
+        "source_notes": [
+          "Airbnb Data Science intern role summaries on careers site",
+          "Public talks on experimentation and causal inference in product"
+        ],
+        "signals": {
+          "strong": [
+            "Experiment design",
+            "SQL fluency",
+            "Clear metric storytelling"
+          ],
+          "developing": [
+            "Causal inference",
+            "Production model monitoring"
+          ],
+          "gap_risk": [
+            "Marketplace heterogeneity",
+            "Long-horizon impact measurement"
+          ]
+        },
+        "jd_keywords": [
+          "Python",
+          "SQL",
+          "statistics",
+          "A/B testing",
+          "machine learning",
+          "data visualization",
+          "communication"
+        ],
+        "top_projects": [
+          {
+            "title": "Pricing Experiment Analyzer",
+            "why": "Shows product experimentation rigor.",
+            "tech": [
+              "Python",
+              "Pandas",
+              "Statsmodels",
+              "Tableau"
+            ],
+            "dataset": "Kaggle pricing experiments",
+            "interview_angle": "Explain hypothesis, metric, and decision threshold."
+          },
+          {
+            "title": "Search CTR Prediction Model",
+            "why": "Signals ranking and conversion awareness.",
+            "tech": [
+              "Python",
+              "XGBoost",
+              "scikit-learn"
+            ],
+            "dataset": "Search click logs (synthetic)",
+            "interview_angle": "Discuss offline vs online metric gaps."
+          },
+          {
+            "title": "Host Churn Early Warning",
+            "why": "Demonstrates actionable predictive analytics.",
+            "tech": [
+              "Python",
+              "LightGBM",
+              "FastAPI"
+            ],
+            "dataset": "Telco churn (proxy)",
+            "interview_angle": "Frame intervention design, not just model accuracy."
+          }
+        ],
+        "course_rec": {
+          "title": "A/B Testing by Google",
+          "url": "https://www.udacity.com/course/ab-testing--ud257",
+          "why": "Aligns with Airbnb's experimentation-heavy product culture."
+        },
+        "framing_tip": "Always connect model output to a product decision someone can act on."
+      }
+    }
+  },
+  {
+    "id": "uber",
+    "name": "Uber",
+    "tier": "Growth",
+    "industry": "tech",
+    "roles": {
+      "swe-intern": {
+        "title": "Software Engineer Intern",
+        "source_notes": [
+          "Uber Careers — Software Engineer Intern (backend/mobile/platform variants)",
+          "Engineering blog on real-time dispatch and geospatial systems"
+        ],
+        "signals": {
+          "strong": [
+            "Distributed systems basics",
+            "Mobile/web API integration",
+            "Performance awareness"
+          ],
+          "developing": [
+            "Geospatial indexing",
+            "High-availability patterns"
+          ],
+          "gap_risk": [
+            "Realtime dispatch optimization",
+            "Global reliability engineering"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Go",
+          "Python",
+          "distributed systems",
+          "microservices",
+          "SQL",
+          "mobile APIs",
+          "testing"
+        ],
+        "top_projects": [
+          {
+            "title": "Ride Matching Simulator",
+            "why": "Mirrors dispatch and latency constraints.",
+            "tech": [
+              "Go",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": "NYC taxi trips",
+            "interview_angle": "Explain matching heuristic and bottleneck analysis."
+          },
+          {
+            "title": "Surge Pricing Microservice",
+            "why": "Shows marketplace dynamics and API design.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "Kafka"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss fairness concerns and guardrails."
+          },
+          {
+            "title": "Driver ETA Prediction API",
+            "why": "Signals geospatial + ML integration.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "scikit-learn"
+            ],
+            "dataset": "Uber movement data (public samples)",
+            "interview_angle": "Frame error metrics that matter to riders."
+          }
+        ],
+        "course_rec": {
+          "title": "System Design Primer",
+          "url": "https://github.com/donnemartin/system-design-primer",
+          "why": "Uber interviews emphasize scalable service design."
+        },
+        "framing_tip": "Quantify latency, reliability, and user impact in every story."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "source_notes": [
+          "Uber New Grad Software Engineer job descriptions",
+          "Public engineering posts on microservice reliability"
+        ],
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "Service-level thinking",
+            "Cross-team collaboration"
+          ],
+          "developing": [
+            "Observability maturity",
+            "Cost-aware architecture"
+          ],
+          "gap_risk": [
+            "Multi-region failover",
+            "Complex dependency management"
+          ]
+        },
+        "jd_keywords": [
+          "distributed systems",
+          "Java",
+          "Go",
+          "microservices",
+          "on-call",
+          "CI/CD",
+          "code review",
+          "scalability"
+        ],
+        "top_projects": [
+          {
+            "title": "Trip State Machine Service",
+            "why": "Demonstrates lifecycle management for core domain entities.",
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Walk through invalid state prevention."
+          },
+          {
+            "title": "Service Mesh Latency Dashboard",
+            "why": "Shows SRE-minded production engineering.",
+            "tech": [
+              "Go",
+              "OpenTelemetry",
+              "Grafana"
+            ],
+            "dataset": "Synthetic trace data",
+            "interview_angle": "Explain how you reduced p99 latency."
+          },
+          {
+            "title": "Payments Idempotency Gateway",
+            "why": "Signals financial correctness under retries.",
+            "tech": [
+              "Go",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss duplicate charge prevention design."
+          }
+        ],
+        "course_rec": {
+          "title": "Site Reliability Engineering",
+          "url": "https://sre.google/sre-book/table-of-contents/",
+          "why": "Production reliability is central to Uber-scale systems."
+        },
+        "framing_tip": "Use STAR with explicit metrics for reliability and customer impact."
+      }
+    }
+  },
+  {
+    "id": "lockheed-martin",
+    "name": "Lockheed Martin",
+    "tier": "Defense",
+    "industry": "aerospace-defense",
+    "roles": {
+      "swe-intern": {
+        "title": "Software Engineer Intern",
+        "source_notes": [
+          "Lockheed Martin Careers — Software Engineering intern postings",
+          "Public program pages for aerospace software and systems engineering"
+        ],
+        "signals": {
+          "strong": [
+            "C/C++ fundamentals",
+            "Testing discipline",
+            "Requirements traceability"
+          ],
+          "developing": [
+            "Real-time systems",
+            "Safety-critical mindset"
+          ],
+          "gap_risk": [
+            "DO-178 style process familiarity",
+            "Hardware-in-the-loop testing"
+          ]
+        },
+        "jd_keywords": [
+          "C++",
+          "Java",
+          "Python",
+          "software development",
+          "testing",
+          "Linux",
+          "Agile",
+          "documentation"
+        ],
+        "top_projects": [
+          {
+            "title": "Flight Telemetry Parser",
+            "why": "Aligns with aerospace data ingestion workflows.",
+            "tech": [
+              "C++",
+              "Python",
+              "binary parsing"
+            ],
+            "dataset": "Public flight telemetry samples",
+            "interview_angle": "Explain validation and error handling for sensor packets."
+          },
+          {
+            "title": "Mission Planning Scheduler",
+            "why": "Shows constraint-based planning thinking.",
+            "tech": [
+              "Python",
+              "OR-Tools",
+              "CLI"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss tradeoffs between optimality and runtime."
+          },
+          {
+            "title": "Automated Test Harness",
+            "why": "Signals quality engineering valued in defense software.",
+            "tech": [
+              "Python",
+              "pytest",
+              "CI"
+            ],
+            "dataset": null,
+            "interview_angle": "Frame defect prevention and traceability."
+          }
+        ],
+        "course_rec": {
+          "title": "Introduction to Embedded Systems",
+          "url": "https://www.coursera.org/learn/introduction-embedded-systems",
+          "why": "Builds context for aerospace software constraints."
+        },
+        "framing_tip": "Emphasize rigor, documentation, and reliability over speed-only delivery."
+      },
+      "systems-engineer-intern": {
+        "title": "Systems Engineer Intern",
+        "source_notes": [
+          "Lockheed Martin Systems Engineering intern role descriptions",
+          "INCOSE systems engineering fundamentals referenced in defense hiring"
+        ],
+        "signals": {
+          "strong": [
+            "Systems thinking",
+            "Interface definition",
+            "Technical communication"
+          ],
+          "developing": [
+            "Model-based systems engineering",
+            "Verification planning"
+          ],
+          "gap_risk": [
+            "Cross-subsystem integration",
+            "Requirements volatility management"
+          ]
+        },
+        "jd_keywords": [
+          "systems engineering",
+          "requirements",
+          "verification",
+          "Python",
+          "MATLAB",
+          "documentation",
+          "testing",
+          "collaboration"
+        ],
+        "top_projects": [
+          {
+            "title": "Requirements Traceability Matrix Tool",
+            "why": "Directly maps to systems engineering deliverables.",
+            "tech": [
+              "Python",
+              "SQLite",
+              "Streamlit"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain how you linked requirements to test cases."
+          },
+          {
+            "title": "Subsystem Interface Spec Generator",
+            "why": "Shows cross-team contract clarity.",
+            "tech": [
+              "Markdown",
+              "Python",
+              "templates"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss ambiguity reduction across teams."
+          },
+          {
+            "title": "Simulation Validation Dashboard",
+            "why": "Demonstrates verification mindset.",
+            "tech": [
+              "Python",
+              "Pandas",
+              "Plotly"
+            ],
+            "dataset": "Simulation output CSV",
+            "interview_angle": "Frame pass/fail criteria and edge cases."
+          }
+        ],
+        "course_rec": {
+          "title": "Systems Engineering Fundamentals",
+          "url": "https://www.edx.org/learn/systems-engineering",
+          "why": "Matches systems intern interview vocabulary."
+        },
+        "framing_tip": "Tell stories about reducing integration risk and clarifying interfaces."
+      }
+    }
+  },
+  {
+    "id": "coinbase",
+    "name": "Coinbase",
+    "tier": "Growth",
+    "industry": "fintech-crypto",
+    "roles": {
+      "swe-intern": {
+        "title": "Software Engineer Intern",
+        "source_notes": [
+          "Coinbase Careers — Software Engineer Intern postings",
+          "Engineering blog on crypto custody, compliance, and API reliability"
+        ],
+        "signals": {
+          "strong": [
+            "Secure API development",
+            "Backend service design",
+            "Testing rigor"
+          ],
+          "developing": [
+            "Blockchain fundamentals",
+            "Financial compliance awareness"
+          ],
+          "gap_risk": [
+            "Wallet security models",
+            "High-throughput transaction processing"
+          ]
+        },
+        "jd_keywords": [
+          "Go",
+          "Ruby",
+          "JavaScript",
+          "APIs",
+          "security",
+          "distributed systems",
+          "SQL",
+          "testing"
+        ],
+        "top_projects": [
+          {
+            "title": "Crypto Price Alert Service",
+            "why": "Shows market data ingestion and user-facing reliability.",
+            "tech": [
+              "Go",
+              "Redis",
+              "WebSockets"
+            ],
+            "dataset": "CoinGecko public API",
+            "interview_angle": "Discuss rate limits and delivery guarantees."
+          },
+          {
+            "title": "Transaction Reconciliation Tool",
+            "why": "Mirrors financial correctness requirements.",
+            "tech": [
+              "Python",
+              "PostgreSQL",
+              "FastAPI"
+            ],
+            "dataset": "Synthetic ledger entries",
+            "interview_angle": "Explain mismatch detection and audit logs."
+          },
+          {
+            "title": "KYC Document Intake API",
+            "why": "Signals compliance-aware product engineering.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "S3"
+            ],
+            "dataset": null,
+            "interview_angle": "Frame privacy and access control decisions."
+          }
+        ],
+        "course_rec": {
+          "title": "Blockchain Basics",
+          "url": "https://www.coursera.org/learn/blockchain-basics",
+          "why": "Provides domain vocabulary for crypto fintech interviews."
+        },
+        "framing_tip": "Prioritize security, correctness, and user trust in every example."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "source_notes": [
+          "Coinbase New Grad Software Engineer JD patterns",
+          "Public postmortems on exchange incidents and reliability"
+        ],
+        "signals": {
+          "strong": [
+            "Production service ownership",
+            "Incident response",
+            "API evolution"
+          ],
+          "developing": [
+            "Crypto protocol depth",
+            "Regulatory reporting systems"
+          ],
+          "gap_risk": [
+            "Cold storage security architecture",
+            "Global compliance automation"
+          ]
+        },
+        "jd_keywords": [
+          "Go",
+          "distributed systems",
+          "microservices",
+          "security",
+          "observability",
+          "on-call",
+          "PostgreSQL",
+          "Kafka"
+        ],
+        "top_projects": [
+          {
+            "title": "Order Book Matching Engine",
+            "why": "Demonstrates low-latency correctness-critical systems.",
+            "tech": [
+              "Go",
+              "in-memory structures",
+              "benchmarks"
+            ],
+            "dataset": "Historical trade ticks (public)",
+            "interview_angle": "Discuss ordering guarantees and performance tests."
+          },
+          {
+            "title": "Fraud Detection Rules Engine",
+            "why": "Signals risk operations integration.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "PostgreSQL"
+            ],
+            "dataset": "Credit card fraud dataset",
+            "interview_angle": "Explain precision/recall tradeoffs for investigators."
+          },
+          {
+            "title": "API Deprecation Migration Service",
+            "why": "Shows mature platform engineering for external developers.",
+            "tech": [
+              "Node.js",
+              "OpenAPI",
+              "TypeScript"
+            ],
+            "dataset": null,
+            "interview_angle": "Walk through zero-downtime migration plan."
+          }
+        ],
+        "course_rec": {
+          "title": "OWASP Application Security",
+          "url": "https://owasp.org/www-project-web-security-testing-guide/",
+          "why": "Security depth is non-negotiable for exchange engineering."
+        },
+        "framing_tip": "Use concrete examples of preventing financial or security regressions."
       }
     }
   }

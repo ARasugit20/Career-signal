@@ -1,5 +1,6 @@
 {
   "framework": null,
   "buildCommand": "npm --prefix client run build",
-  "outputDirectory": "client/dist"
+  "outputDirectory": "client/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

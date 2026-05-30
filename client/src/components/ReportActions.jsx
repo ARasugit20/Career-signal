@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { buildShareUrl } from "../lib/shareUrl";
 
 function buildShareSummary(report) {
   const projectTitles = (report.top_projects || [])
@@ -37,16 +38,27 @@ Try it: ${liveDemo}
 #softwareengineering #careers #buildinpublic`;
 }
 
-export default function ReportActions({ report }) {
+export default function ReportActions({ report, companyId, roleId }) {
+  const [copied, setCopied] = useState("");
   const shareSummary = useMemo(() => buildShareSummary(report), [report]);
   const linkedInPost = useMemo(() => buildLinkedInPost(report), [report]);
+  const shareUrl = useMemo(() => {
+    if (companyId && roleId) return buildShareUrl(companyId, roleId);
+    return window.location.href;
+  }, [companyId, roleId]);
+
+  async function copyWithFeedback(text, label) {
+    await navigator.clipboard.writeText(text);
+    setCopied(label);
+    setTimeout(() => setCopied(""), 2000);
+  }
 
   async function copyShareText() {
-    await navigator.clipboard.writeText(shareSummary);
+    await copyWithFeedback(shareSummary, "summary");
   }
 
   async function copyShareLink() {
-    await navigator.clipboard.writeText(window.location.href);
+    await copyWithFeedback(shareUrl, "link");
   }
 
   async function copyLinkedInPost() {
@@ -83,7 +95,14 @@ ${report.framing_tip}
   }
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="space-y-2">
+      {copied && (
+        <p className="text-xs text-emerald-300">
+          Copied {copied === "link" ? "share link" : copied} to clipboard.
+        </p>
+      )}
+      <p className="break-all text-xs text-slate-400">{shareUrl}</p>
+      <div className="flex flex-wrap gap-2">
       <button
         type="button"
         onClick={copyShareText}
@@ -112,6 +131,7 @@ ${report.framing_tip}
       >
         Download share card
       </button>
+      </div>
     </div>
   );
 }

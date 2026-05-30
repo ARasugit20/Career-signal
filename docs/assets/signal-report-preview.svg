@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#020617"/>
+  <rect x="40" y="40" width="880" height="460" rx="24" fill="#0f172a" stroke="#1e293b"/>
+  <text x="72" y="92" fill="#a5b4fc" font-family="Inter, sans-serif" font-size="14">SIGNAL REPORT</text>
+  <text x="72" y="130" fill="#f8fafc" font-family="Inter, sans-serif" font-size="28" font-weight="700">Amazon  SDE Intern</text>
+  <rect x="72" y="155" width="120" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="88" y="174" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="12">Tier: FAANG</text>
+  <rect x="72" y="200" width="250" height="90" rx="12" fill="#022c22" stroke="#065f46"/>
+  <text x="88" y="225" fill="#6ee7b7" font-family="Inter, sans-serif" font-size="13" font-weight="600">Strong Signal</text>
+  <text x="88" y="250" fill="#d1fae5" font-family="Inter, sans-serif" font-size="12">Data structures</text>
+  <text x="88" y="270" fill="#d1fae5" font-family="Inter, sans-serif" font-size="12">Backend API development</text>
+  <rect x="340" y="200" width="250" height="90" rx="12" fill="#451a03" stroke="#92400e"/>
+  <text x="356" y="225" fill="#fcd34d" font-family="Inter, sans-serif" font-size="13" font-weight="600">Developing</text>
+  <text x="356" y="250" fill="#fef3c7" font-family="Inter, sans-serif" font-size="12">Distributed systems</text>
+  <rect x="608" y="200" width="250" height="90" rx="12" fill="#450a0a" stroke="#991b1b"/>
+  <text x="624" y="225" fill="#fca5a5" font-family="Inter, sans-serif" font-size="13" font-weight="600">Gap</text>
+  <text x="624" y="250" fill="#fee2e2" font-family="Inter, sans-serif" font-size="12">Real-time pipelines</text>
+  <rect x="72" y="310" width="786" height="160" rx="12" fill="#111827" stroke="#1f2937"/>
+  <text x="88" y="340" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="14" font-weight="600">Top projects to build</text>
+  <text x="88" y="370" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">1. URL Shortener with Redis Caching</text>
+  <text x="88" y="392" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">2. Order Event Processor</text>
+  <text x="88" y="414" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">3. Product Recommendation API</text>
+</svg>

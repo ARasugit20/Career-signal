@@ -3,7 +3,7 @@ import SkillPill from "./SkillPill";
 import SignalStrengthBar from "./SignalStrengthBar";
 import ReportActions from "./ReportActions";
 
-export default function SignalReport({ report }) {
+export default function SignalReport({ report, companyId, roleId }) {
   if (!report) return null;
 
   return (
@@ -14,7 +14,7 @@ export default function SignalReport({ report }) {
           {report.company} — {report.role}
         </h2>
         <div className="mt-3">
-          <ReportActions report={report} />
+          <ReportActions report={report} companyId={companyId} roleId={roleId} />
         </div>
         <div className="mt-2 flex flex-wrap gap-2">
           <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">
