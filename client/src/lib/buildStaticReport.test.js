@@ -21,6 +21,14 @@ describe("buildStaticReport", () => {
     expect(report.skill_keywords.length).toBeGreaterThan(0);
   });
 
+  it("uses industry-specific headline for finance companies", () => {
+    const company = companies.find((item) => item.id === "blackrock");
+    const role = company.roles["sde-intern"];
+    const report = buildStaticReport(company, role);
+    expect(report.headline.toLowerCase()).toContain("blackrock");
+    expect(report.headline.toLowerCase()).toMatch(/rigor|regulated|finance/);
+  });
+
   it("creates dataset recommendation when a project has dataset", () => {
     const company = companies.find((item) => item.id === "google");
     const role = company.roles["swe-intern"];

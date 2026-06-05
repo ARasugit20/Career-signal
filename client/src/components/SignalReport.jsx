@@ -3,7 +3,7 @@ import SkillPill from "./SkillPill";
 import SignalStrengthBar from "./SignalStrengthBar";
 import ReportActions from "./ReportActions";
 
-export default function SignalReport({ report, companyId, roleId }) {
+export default function SignalReport({ report, companyId, roleId, onChooseAnother }) {
   if (!report) return null;
 
   return (
@@ -13,9 +13,6 @@ export default function SignalReport({ report, companyId, roleId }) {
         <h2 className="mt-2 text-2xl font-bold text-slate-100">
           {report.company} — {report.role}
         </h2>
-        <div className="mt-3">
-          <ReportActions report={report} companyId={companyId} roleId={roleId} />
-        </div>
         <div className="mt-2 flex flex-wrap gap-2">
           <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">
             Tier: {report.company_meta?.tier || "N/A"}
@@ -26,6 +23,12 @@ export default function SignalReport({ report, companyId, roleId }) {
         </div>
         <p className="mt-3 text-slate-200">{report.headline}</p>
         <p className="mt-2 text-sm leading-relaxed text-slate-300">{report.signal_summary}</p>
+        {report.company_meta?.source_notes && (
+          <p className="mt-3 rounded-xl border border-slate-800 bg-slate-950/60 p-3 text-xs leading-relaxed text-slate-400">
+            <span className="font-semibold text-slate-300">Data grounding: </span>
+            {report.company_meta.source_notes}
+          </p>
+        )}
       </header>
 
       <div>
@@ -104,6 +107,21 @@ export default function SignalReport({ report, companyId, roleId }) {
         <p className="text-sm font-semibold text-indigo-200">Interview framing tip</p>
         <p className="mt-1 text-sm text-indigo-100">{report.framing_tip}</p>
       </div>
+
+      <div className="border-t border-slate-800 pt-5">
+        <p className="mb-3 text-sm font-semibold text-slate-200">Share this report</p>
+        <ReportActions report={report} companyId={companyId} roleId={roleId} />
+      </div>
+
+      {onChooseAnother && (
+        <button
+          type="button"
+          onClick={onChooseAnother}
+          className="text-sm font-semibold text-indigo-300 transition hover:text-indigo-200"
+        >
+          ← Choose a different target
+        </button>
+      )}
     </section>
   );
 }
