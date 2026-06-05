@@ -2,9 +2,9 @@
 
 Career Signal is a role intelligence engine for CS students who know where they want to work but do not know what to build to get there.
 
-**Live demo:** https://career-signal.vercel.app *(set `VITE_LIVE_DEMO_URL` in Vercel after first deploy)*  
+**Live demo:** https://career-signal.vercel.app *(deploy with `vercel login` then `vercel --prod` from repo root; set `VITE_LIVE_DEMO_URL` in Vercel env)*  
 **Tech stack:** React, Vite, TailwindCSS, Node.js, Express, Anthropic (optional AI mode)  
-**Suggested GitHub topics:** `react`, `vite`, `career`, `recruiting`, `portfolio`
+**GitHub topics:** `react`, `vite`, `career`, `recruiting`, `portfolio`, `cs-students`, `job-search`
 
 ## Problem
 
@@ -54,6 +54,8 @@ Signals are categorized honestly as **Strong / Developing / Gap** — never fake
 - **Static report mode (default):** no backend or API key required
 - **25 companies** with intern-level (and select full-time/domain) roles
 - Optional AI mode through `/api/signal`
+- Persistent app header with tab navigation (`?tab=signal|gap|outreach`)
+- Filterable company combobox and “Try an example” quick start
 - Searchable company selector
 - Gap Analysis tab (GitHub + resume + target JD overlap)
 - Outreach Tracker tab with localStorage persistence and follow-up dashboard

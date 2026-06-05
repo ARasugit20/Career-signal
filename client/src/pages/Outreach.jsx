@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useOutreachTracker } from "../hooks/useOutreachTracker";
 
 const STATUS_OPTIONS = ["applied", "replied", "rejected", "offer", "info-chat"];
@@ -13,7 +13,8 @@ function defaultEntry() {
     dateSent: "",
     followUpDate: "",
     status: "applied",
-    notes: ""
+    notes: "",
+    templateOverride: null
   };
 }
 
@@ -38,6 +39,7 @@ export default function Outreach({ companies }) {
 
   const [draft, setDraft] = useState(defaultEntry());
   const [statusFilter, setStatusFilter] = useState("all");
+  const [addSuccess, setAddSuccess] = useState(false);
 
   const filtered = useMemo(() => {
     if (statusFilter === "all") return entries;
@@ -46,12 +48,21 @@ export default function Outreach({ companies }) {
 
   const activeCompany = companies.find((item) => item.id === draft.companyId);
   const firstRole = activeCompany ? Object.values(activeCompany.roles || {})[0] : null;
-  const template = buildTemplate(activeCompany, firstRole);
+  const baseTemplate = buildTemplate(activeCompany, firstRole);
+
+  useEffect(() => {
+    setDraft((prev) => ({ ...prev, templateOverride: null }));
+  }, [draft.companyId]);
+
+  const templateText =
+    draft.templateOverride !== null ? draft.templateOverride : baseTemplate;
 
   function submit() {
     if (!draft.company || !draft.role) return;
     addEntry(draft);
     setDraft(defaultEntry());
+    setAddSuccess(true);
+    setTimeout(() => setAddSuccess(false), 3000);
   }
 
   function exportJson() {
@@ -81,11 +92,32 @@ export default function Outreach({ companies }) {
         </p>
       </header>
 
-      <div className="rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
-        <p className="text-sm font-semibold text-slate-200">
-          Follow-ups due this week: {dueThisWeek.length}
-        </p>
-      </div>
+      {dueThisWeek.length > 0 ? (
+        <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4">
+          <p className="text-sm font-semibold text-amber-200">
+            Follow-ups due this week ({dueThisWeek.length})
+          </p>
+          <ul className="mt-2 space-y-2">
+            {dueThisWeek.map((entry) => (
+              <li key={entry.id} className="text-sm text-amber-100">
+                <span className="font-semibold">
+                  {entry.company} — {entry.role}
+                </span>
+                {entry.followUpDate && (
+                  <span className="text-amber-200/80"> · due {entry.followUpDate}</span>
+                )}
+                {entry.contactName && (
+                  <span className="text-amber-200/80"> · {entry.contactName}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div className="rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
+          <p className="text-sm text-slate-400">No follow-ups due this week.</p>
+        </div>
+      )}
 
       <div className="grid gap-4 md:grid-cols-2">
         <label className="flex flex-col gap-2">
@@ -98,7 +130,8 @@ export default function Outreach({ companies }) {
               setDraft((prev) => ({
                 ...prev,
                 companyId: event.target.value,
-                company: company?.name || ""
+                company: company?.name || "",
+                templateOverride: null
               }));
             }}
           >
@@ -175,12 +208,14 @@ export default function Outreach({ companies }) {
         <textarea
           rows={4}
           className="rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-slate-100 outline-none focus:border-indigo-400"
-          value={template}
-          readOnly
+          value={templateText}
+          onChange={(event) =>
+            setDraft((prev) => ({ ...prev, templateOverride: event.target.value }))
+          }
         />
       </label>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <button
           type="button"
           onClick={submit}
@@ -188,6 +223,9 @@ export default function Outreach({ companies }) {
         >
           Add outreach entry
         </button>
+        {addSuccess && (
+          <p className="text-sm font-medium text-emerald-300">Entry added successfully.</p>
+        )}
         <button
           type="button"
           onClick={exportJson}
@@ -217,46 +255,52 @@ export default function Outreach({ companies }) {
         </select>
       </div>
 
-      <div className="space-y-3">
-        {filtered.map((entry) => (
-          <div key={entry.id} className="rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <p className="font-semibold text-slate-100">
-                {entry.company} - {entry.role}
-              </p>
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  onClick={() =>
-                    updateEntry(entry.id, {
-                      status:
-                        entry.status === "applied"
-                          ? "replied"
-                          : entry.status === "replied"
-                            ? "offer"
-                            : entry.status
-                    })
-                  }
-                  className="rounded-lg border border-slate-700 px-2 py-1 text-xs text-slate-200 hover:border-indigo-400"
-                >
-                  Advance status
-                </button>
-                <button
-                  type="button"
-                  onClick={() => deleteEntry(entry.id)}
-                  className="rounded-lg border border-rose-500/50 px-2 py-1 text-xs text-rose-200 hover:border-rose-400"
-                >
-                  Delete
-                </button>
+      {filtered.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-slate-700 bg-slate-950/40 p-8 text-center">
+          <p className="font-semibold text-slate-200">No outreach tracked yet</p>
+          <p className="mt-2 text-sm text-slate-400">Add your first contact above.</p>
+        </div>
+      ) : (
+        <div className="space-y-3">
+          {filtered.map((entry) => (
+            <div key={entry.id} className="rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="font-semibold text-slate-100">
+                  {entry.company} - {entry.role}
+                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <select
+                    className="rounded-lg border border-slate-700 bg-slate-900 px-2 py-1 text-xs text-slate-100"
+                    value={entry.status}
+                    onChange={(event) =>
+                      updateEntry(entry.id, { status: event.target.value })
+                    }
+                  >
+                    {STATUS_OPTIONS.map((status) => (
+                      <option key={status} value={status}>
+                        {status}
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={() => deleteEntry(entry.id)}
+                    className="rounded-lg border border-rose-500/50 px-2 py-1 text-xs text-rose-200 hover:border-rose-400"
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
+              {entry.contactName && (
+                <p className="mt-1 text-sm text-slate-300">Contact: {entry.contactName}</p>
+              )}
+              {entry.followUpDate && (
+                <p className="mt-1 text-sm text-slate-300">Follow-up: {entry.followUpDate}</p>
+              )}
             </div>
-            <p className="mt-1 text-sm text-slate-300">Status: {entry.status}</p>
-            {entry.followUpDate && (
-              <p className="mt-1 text-sm text-slate-300">Follow-up: {entry.followUpDate}</p>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

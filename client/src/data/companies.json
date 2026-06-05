@@ -853,6 +853,81 @@
           "why": "Boosts cloud fluency expected for Microsoft SWE roles."
         },
         "framing_tip": "Anchor your project stories on customer impact and engineering rigor."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "C#",
+          "Java",
+          "Python",
+          "Azure",
+          "REST APIs",
+          "distributed systems",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Multi-tenant API Gateway (Production Hardening)",
+            "why": "Shows backend platform thinking and tenant isolation — positioned for full-time Microsoft hiring bar.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain auth, rate limiting, and noisy-neighbor controls. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Cloud Cost Alert Service",
+            "why": "Maps to practical engineering impact on cloud teams — positioned for full-time Microsoft hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Azure Functions",
+              "Cosmos DB"
+            ],
+            "dataset": "Azure pricing dataset",
+            "interview_angle": "Walk through alert thresholds and false positive tradeoffs. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Teams Activity Insights Dashboard",
+            "why": "Shows collaboration-product analytics and signal-to-noise judgment — positioned for full-time Microsoft hiring bar.",
+            "tech": [
+              "React",
+              "Node.js",
+              "PostgreSQL",
+              "Chart.js"
+            ],
+            "dataset": "Synthetic collaboration events",
+            "interview_angle": "Focus on which metric changed team behavior. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Azure Fundamentals",
+          "url": "https://learn.microsoft.com/training/paths/azure-fundamentals/",
+          "why": "Boosts cloud fluency expected for Microsoft SWE roles."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -933,6 +1008,81 @@
           "why": "Strengthens practical architecture communication."
         },
         "framing_tip": "Tie every technical decision to product outcomes and iteration speed."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "C++",
+          "Java",
+          "Python",
+          "data structures",
+          "algorithms",
+          "distributed systems",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Realtime Group Chat Service (Production Hardening)",
+            "why": "Mirrors messaging reliability and concurrency tradeoffs — positioned for full-time Meta hiring bar.",
+            "tech": [
+              "Go",
+              "WebSockets",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss ordering, delivery guarantees, and latency tradeoffs. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Social Feed Ranking Prototype",
+            "why": "Shows ranking + product signal relevance — positioned for full-time Meta hiring bar.",
+            "tech": [
+              "Python",
+              "Pandas",
+              "scikit-learn",
+              "FastAPI"
+            ],
+            "dataset": "Kaggle social recommendation dataset",
+            "interview_angle": "Explain ranking metrics and feedback loops. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "A/B Experiment Platform",
+            "why": "Maps directly to Meta product iteration culture — positioned for full-time Meta hiring bar.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "React"
+            ],
+            "dataset": null,
+            "interview_angle": "Focus on experiment guardrails and launch confidence. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Systems Design Primer",
+          "url": "https://github.com/donnemartin/system-design-primer",
+          "why": "Strengthens practical architecture communication."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1012,6 +1162,80 @@
           "why": "Aligns with Apple platform engineering expectations."
         },
         "framing_tip": "Emphasize quality, privacy, and polish over feature count."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Swift",
+          "Objective-C",
+          "C++",
+          "Python",
+          "software engineering",
+          "performance",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "On-device Notes Search (Production Hardening)",
+            "why": "Demonstrates privacy-friendly local inference and UX quality — positioned for full-time Apple hiring bar.",
+            "tech": [
+              "Swift",
+              "CoreData",
+              "SQLite",
+              "iOS"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain offline-first design and performance tuning. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Image Compression Benchmark Tool",
+            "why": "Shows systems-level optimization mindset — positioned for full-time Apple hiring bar.",
+            "tech": [
+              "C++",
+              "Python",
+              "CLI"
+            ],
+            "dataset": "Open Images subset",
+            "interview_angle": "Share benchmark design and tradeoffs measured. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Secure File Sync Service",
+            "why": "Signals attention to encryption and reliability — positioned for full-time Apple hiring bar.",
+            "tech": [
+              "Swift",
+              "Node.js",
+              "PostgreSQL",
+              "AES"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss threat model and key management choices. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "iOS App Development with Swift",
+          "url": "https://developer.apple.com/tutorials/app-dev-training",
+          "why": "Aligns with Apple platform engineering expectations."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1091,6 +1315,80 @@
           "why": "Improves reliability vocabulary expected for scale-heavy teams."
         },
         "framing_tip": "Demonstrate ownership in ambiguous production scenarios."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Kotlin",
+          "Python",
+          "distributed systems",
+          "cloud",
+          "microservices",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Video Recommendation Service (Production Hardening)",
+            "why": "Mirrors core personalization signals — positioned for full-time Netflix hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": "MovieLens 25M",
+            "interview_angle": "Frame cold-start and relevance tradeoffs. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Service Reliability Dashboard",
+            "why": "Shows production health and incident response mindset — positioned for full-time Netflix hiring bar.",
+            "tech": [
+              "TypeScript",
+              "Prometheus",
+              "Grafana",
+              "React"
+            ],
+            "dataset": null,
+            "interview_angle": "Walk through SLO selection and alert fatigue prevention. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Content Delivery Cache Simulator",
+            "why": "Signals edge and performance intuition — positioned for full-time Netflix hiring bar.",
+            "tech": [
+              "Go",
+              "Redis",
+              "Docker"
+            ],
+            "dataset": "Synthetic video request traces",
+            "interview_angle": "Discuss cache hit rate versus freshness. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Site Reliability Engineering Book",
+          "url": "https://sre.google/sre-book/table-of-contents/",
+          "why": "Improves reliability vocabulary expected for scale-heavy teams."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1169,6 +1467,80 @@
           "why": "Directly aligned with NVIDIA engineering tooling."
         },
         "framing_tip": "Quantify performance wins with clear before/after metrics."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "C++",
+          "Python",
+          "CUDA",
+          "machine learning",
+          "parallel computing",
+          "performance",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "GPU Image Processing Pipeline (Production Hardening)",
+            "why": "Directly signals parallel optimization capability — positioned for full-time NVIDIA hiring bar.",
+            "tech": [
+              "Python",
+              "CUDA",
+              "NumPy"
+            ],
+            "dataset": "COCO subset",
+            "interview_angle": "Explain speedup measurement and bottleneck analysis. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Model Inference Benchmark CLI",
+            "why": "Shows systems + ML deployment judgment — positioned for full-time NVIDIA hiring bar.",
+            "tech": [
+              "Python",
+              "PyTorch",
+              "ONNX",
+              "Docker"
+            ],
+            "dataset": "ImageNet subset",
+            "interview_angle": "Compare latency and throughput under constraints. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Vector Search Recommender",
+            "why": "Signals retrieval relevance and performance — positioned for full-time NVIDIA hiring bar.",
+            "tech": [
+              "Python",
+              "FAISS",
+              "FastAPI",
+              "PostgreSQL"
+            ],
+            "dataset": "Amazon product reviews",
+            "interview_angle": "Discuss recall-latency tradeoffs. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Intro to CUDA Programming",
+          "url": "https://developer.nvidia.com/cuda-training",
+          "why": "Directly aligned with NVIDIA engineering tooling."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1248,6 +1620,80 @@
           "why": "Reinforces cloud patterns used in Capital One engineering."
         },
         "framing_tip": "Highlight reliability and trust impact, not just feature delivery."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "AWS",
+          "microservices",
+          "REST APIs",
+          "Agile",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Card Spend Insights API (Production Hardening)",
+            "why": "Shows fintech analytics and backend judgment — positioned for full-time Capital One hiring bar.",
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": "Synthetic card transactions",
+            "interview_angle": "Explain spending categorization and anomaly edge cases. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Fraud Rule Engine",
+            "why": "Signals risk-focused product impact — positioned for full-time Capital One hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Kafka",
+              "PostgreSQL"
+            ],
+            "dataset": "Credit Card Fraud Detection (Kaggle)",
+            "interview_angle": "Discuss false-positive cost and review flow. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Secure Feature Flag Service",
+            "why": "Demonstrates controlled rollouts for regulated products — positioned for full-time Capital One hiring bar.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Talk through permissions and rollback controls. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "AWS Developer Learning Path",
+          "url": "https://aws.amazon.com/training/learn-about/developer/",
+          "why": "Reinforces cloud patterns used in Capital One engineering."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1327,6 +1773,80 @@
           "why": "Progressive teams value maintainable enterprise codebases."
         },
         "framing_tip": "Frame your projects as customer outcomes plus reliable execution."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "C#",
+          "React",
+          "REST APIs",
+          "SQL",
+          "testing",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Claims Triage Assistant (Production Hardening)",
+            "why": "Mirrors insurance intake workflows and user impact — positioned for full-time Progressive hiring bar.",
+            "tech": [
+              "React",
+              "Node.js",
+              "PostgreSQL"
+            ],
+            "dataset": "Insurance claims dataset",
+            "interview_angle": "Explain triage logic and fairness checks. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Policy Quote Comparison Tool",
+            "why": "Signals pricing/product understanding — positioned for full-time Progressive hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Redis",
+              "React"
+            ],
+            "dataset": "Auto insurance quote dataset",
+            "interview_angle": "Discuss explainability and user trust. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Agent Follow-up Automation",
+            "why": "Shows operational efficiency design — positioned for full-time Progressive hiring bar.",
+            "tech": [
+              "TypeScript",
+              "Node.js",
+              "Cron",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Frame around reduced customer response time. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Clean Code",
+          "url": "https://www.oreilly.com/library/view/clean-code-a/9780136083238/",
+          "why": "Progressive teams value maintainable enterprise codebases."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1406,6 +1926,80 @@
           "why": "Improves practical secure coding choices for financial systems."
         },
         "framing_tip": "Connect your engineering work to trust, security, and member outcomes."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "AWS",
+          "REST APIs",
+          "microservices",
+          "security",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Member Support Routing API (Production Hardening)",
+            "why": "Shows practical service design and support workflow impact — positioned for full-time USAA hiring bar.",
+            "tech": [
+              "Java",
+              "Spring Boot",
+              "PostgreSQL"
+            ],
+            "dataset": "Synthetic support tickets",
+            "interview_angle": "Discuss prioritization and SLA tradeoffs. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Secure Document Intake",
+            "why": "Signals security-first engineering for sensitive data — positioned for full-time USAA hiring bar.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "S3",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Walk through encryption and access controls. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Claims Status Notification Service",
+            "why": "Demonstrates reliability and customer communication quality — positioned for full-time USAA hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Redis",
+              "Twilio"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain retries and delivery guarantees. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "OWASP Top 10",
+          "url": "https://owasp.org/www-project-top-ten/",
+          "why": "Improves practical secure coding choices for financial systems."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1485,6 +2079,80 @@
           "why": "Improves finance context for stronger project framing."
         },
         "framing_tip": "Prioritize correctness, auditability, and controlled failure handling."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "microservices",
+          "cloud",
+          "SQL",
+          "distributed systems",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Trade Event Processing Service (Production Hardening)",
+            "why": "Mirrors asynchronous financial system workflows — positioned for full-time JPMorgan Chase hiring bar.",
+            "tech": [
+              "Java",
+              "Kafka",
+              "PostgreSQL"
+            ],
+            "dataset": "Synthetic trade events",
+            "interview_angle": "Explain ordering guarantees and reconciliation. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Portfolio Risk Heatmap API",
+            "why": "Signals finance + backend integration skills — positioned for full-time JPMorgan Chase hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Pandas",
+              "PostgreSQL"
+            ],
+            "dataset": "Fama-French factors",
+            "interview_angle": "Discuss risk metric interpretation and caveats. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Settlement Alert Pipeline",
+            "why": "Shows operational reliability and business urgency — positioned for full-time JPMorgan Chase hiring bar.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "Redis",
+              "BullMQ"
+            ],
+            "dataset": null,
+            "interview_angle": "Frame around incident prevention and visibility. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Financial Markets",
+          "url": "https://www.coursera.org/learn/financial-markets-global",
+          "why": "Improves finance context for stronger project framing."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1563,6 +2231,79 @@
           "why": "Adds platform context that strengthens role alignment."
         },
         "framing_tip": "Frame your projects around customer success and platform reliability."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Apex",
+          "JavaScript",
+          "REST APIs",
+          "SOQL",
+          "cloud",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Tenant-aware CRM API (Production Hardening)",
+            "why": "Signals enterprise multi-tenant backend design — positioned for full-time Salesforce hiring bar.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL"
+            ],
+            "dataset": "Synthetic CRM records",
+            "interview_angle": "Discuss tenant isolation and query performance. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Lead Scoring Dashboard",
+            "why": "Maps directly to CRM workflow impact — positioned for full-time Salesforce hiring bar.",
+            "tech": [
+              "React",
+              "Python",
+              "FastAPI",
+              "PostgreSQL"
+            ],
+            "dataset": "Lead conversion dataset",
+            "interview_angle": "Explain scoring assumptions and sales workflow impact. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Webhook Integration Orchestrator",
+            "why": "Shows platform integration and reliability thinking — positioned for full-time Salesforce hiring bar.",
+            "tech": [
+              "Go",
+              "Redis",
+              "PostgreSQL"
+            ],
+            "dataset": null,
+            "interview_angle": "Cover retries, idempotency, and failure visibility. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Salesforce Developer Beginner",
+          "url": "https://trailhead.salesforce.com/",
+          "why": "Adds platform context that strengthens role alignment."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1641,6 +2382,79 @@
           "why": "Builds telemetry vocabulary expected at Datadog."
         },
         "framing_tip": "Lead with debugging speed improvements your system enabled."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Go",
+          "Python",
+          "Java",
+          "distributed systems",
+          "monitoring",
+          "Kubernetes",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Metrics Ingestion Gateway (Production Hardening)",
+            "why": "Directly mirrors observability pipeline work — positioned for full-time Datadog hiring bar.",
+            "tech": [
+              "Go",
+              "Kafka",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": "Synthetic service metrics",
+            "interview_angle": "Discuss sampling and ingestion backpressure. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Trace Explorer UI",
+            "why": "Shows end-to-end developer observability UX — positioned for full-time Datadog hiring bar.",
+            "tech": [
+              "React",
+              "TypeScript",
+              "Node.js"
+            ],
+            "dataset": "OpenTelemetry sample traces",
+            "interview_angle": "Explain cardinality tradeoffs in trace queries. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Incident Correlation Engine",
+            "why": "Signals systems thinking for root-cause analysis — positioned for full-time Datadog hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "scikit-learn"
+            ],
+            "dataset": "Synthetic incident logs",
+            "interview_angle": "Frame precision/recall tradeoffs for alerts. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "OpenTelemetry Fundamentals",
+          "url": "https://opentelemetry.io/docs/",
+          "why": "Builds telemetry vocabulary expected at Datadog."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1718,6 +2532,78 @@
           "why": "Strengthens systems depth aligned with Intel roles."
         },
         "framing_tip": "Quantify performance and reliability outcomes in concrete numbers."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "C",
+          "C++",
+          "Python",
+          "Linux",
+          "automation",
+          "performance",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Benchmark Automation Harness (Production Hardening)",
+            "why": "Signals practical performance engineering mindset — positioned for full-time Intel hiring bar.",
+            "tech": [
+              "Python",
+              "Bash",
+              "Linux"
+            ],
+            "dataset": "Synthetic benchmark traces",
+            "interview_angle": "Explain repeatability and variance controls. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Compiler Optimization Visualizer",
+            "why": "Shows systems-level understanding and tooling UX — positioned for full-time Intel hiring bar.",
+            "tech": [
+              "C++",
+              "Python",
+              "React"
+            ],
+            "dataset": null,
+            "interview_angle": "Discuss tradeoffs between optimization levels. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Device Telemetry Collector",
+            "why": "Demonstrates low-level observability and reliability — positioned for full-time Intel hiring bar.",
+            "tech": [
+              "Go",
+              "SQLite",
+              "CLI"
+            ],
+            "dataset": "Synthetic hardware telemetry",
+            "interview_angle": "Frame design for constrained environments. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Computer Systems: A Programmer's Perspective",
+          "url": "https://csapp.cs.cmu.edu/",
+          "why": "Strengthens systems depth aligned with Intel roles."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1794,6 +2680,78 @@
           "why": "Builds practical IoT architecture context."
         },
         "framing_tip": "Focus on reliability and safety outcomes in your project stories."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "C++",
+          "Python",
+          "IoT",
+          "cloud",
+          "embedded systems",
+          "testing",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Sensor Alert Pipeline (Production Hardening)",
+            "why": "Mirrors industrial monitoring workflows — positioned for full-time Honeywell hiring bar.",
+            "tech": [
+              "Python",
+              "MQTT",
+              "PostgreSQL"
+            ],
+            "dataset": "IoT telemetry dataset",
+            "interview_angle": "Discuss threshold tuning and alert quality. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Edge Device Health Dashboard",
+            "why": "Signals operational observability in physical systems — positioned for full-time Honeywell hiring bar.",
+            "tech": [
+              "React",
+              "Node.js",
+              "InfluxDB"
+            ],
+            "dataset": "Synthetic device health events",
+            "interview_angle": "Explain actionable metrics selection. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Predictive Maintenance Classifier",
+            "why": "Connects ML to real industrial outcomes — positioned for full-time Honeywell hiring bar.",
+            "tech": [
+              "Python",
+              "scikit-learn",
+              "FastAPI"
+            ],
+            "dataset": "NASA Turbofan Engine Degradation",
+            "interview_angle": "Frame false alarms vs missed failures. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Industrial IoT on Google Cloud",
+          "url": "https://www.coursera.org/learn/fundamentals-of-iot",
+          "why": "Builds practical IoT architecture context."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1872,6 +2830,79 @@
           "why": "Reinforces practical modern web product engineering."
         },
         "framing_tip": "Lead with user conversion or retention impact from your builds."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "JavaScript",
+          "React",
+          "Node.js",
+          "REST APIs",
+          "SQL",
+          "cloud",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Domain Suggestion API (Production Hardening)",
+            "why": "Maps directly to GoDaddy product primitives — positioned for full-time GoDaddy hiring bar.",
+            "tech": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL"
+            ],
+            "dataset": "Word frequency + domain popularity",
+            "interview_angle": "Explain suggestion ranking and latency targets. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Website Template Recommender",
+            "why": "Signals SMB product relevance and UX personalization — positioned for full-time GoDaddy hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "scikit-learn",
+              "React"
+            ],
+            "dataset": "Website templates metadata",
+            "interview_angle": "Discuss conversion-oriented recommendation choices. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Checkout Recovery Flow",
+            "why": "Shows growth/product engineering impact — positioned for full-time GoDaddy hiring bar.",
+            "tech": [
+              "React",
+              "Node.js",
+              "Redis"
+            ],
+            "dataset": "Synthetic checkout events",
+            "interview_angle": "Frame metrics improved and A/B plan. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Full-Stack Open",
+          "url": "https://fullstackopen.com/en/",
+          "why": "Reinforces practical modern web product engineering."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
@@ -1950,6 +2981,79 @@
           "why": "Security posture is central for public safety tech products."
         },
         "framing_tip": "Frame your work around trust, reliability, and high-stakes usability."
+      },
+      "swe-fulltime": {
+        "title": "Software Engineer I",
+        "signals": {
+          "strong": [
+            "Production ownership",
+            "End-to-end feature delivery",
+            "Code review discipline"
+          ],
+          "developing": [
+            "Cross-service debugging",
+            "Observability and SLO thinking"
+          ],
+          "gap_risk": [
+            "Large-scale incident response",
+            "Cost-aware architecture trade-offs"
+          ]
+        },
+        "jd_keywords": [
+          "Java",
+          "Python",
+          "cloud",
+          "distributed systems",
+          "security",
+          "REST APIs",
+          "production systems",
+          "ownership",
+          "on-call",
+          "code reviews",
+          "system design"
+        ],
+        "top_projects": [
+          {
+            "title": "Evidence Metadata Indexer (Production Hardening)",
+            "why": "Signals search + reliability concerns similar to Axon workflows — positioned for full-time Axon hiring bar.",
+            "tech": [
+              "Python",
+              "FastAPI",
+              "Elasticsearch",
+              "PostgreSQL"
+            ],
+            "dataset": "Open police report metadata",
+            "interview_angle": "Discuss indexing accuracy and retrieval latency. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Audit-safe Access Log Service",
+            "why": "Demonstrates trust and compliance engineering mindset — positioned for full-time Axon hiring bar.",
+            "tech": [
+              "Go",
+              "PostgreSQL",
+              "Redis"
+            ],
+            "dataset": null,
+            "interview_angle": "Explain tamper resistance and immutable log design. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          },
+          {
+            "title": "Incident Timeline Builder",
+            "why": "Shows product relevance for public safety context — positioned for full-time Axon hiring bar.",
+            "tech": [
+              "React",
+              "Node.js",
+              "TypeScript"
+            ],
+            "dataset": "Synthetic incident event stream",
+            "interview_angle": "Frame around operator decision speed improvements. Emphasize on-call readiness, rollback strategy, and post-launch metrics."
+          }
+        ],
+        "course_rec": {
+          "title": "Secure Coding Practices",
+          "url": "https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/",
+          "why": "Security posture is central for public safety tech products."
+        },
+        "framing_tip": "Frame every story around measurable production impact and how you reduced risk for the team."
       }
     }
   },
