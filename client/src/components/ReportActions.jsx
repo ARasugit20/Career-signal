@@ -62,7 +62,7 @@ export default function ReportActions({ report, companyId, roleId }) {
   }
 
   async function copyLinkedInPost() {
-    await navigator.clipboard.writeText(linkedInPost);
+    await copyWithFeedback(linkedInPost, "linkedinpost");
   }
 
   function downloadShareCard() {
@@ -98,7 +98,13 @@ ${report.framing_tip}
     <div className="space-y-2">
       {copied && (
         <p className="text-xs text-emerald-300">
-          Copied {copied === "link" ? "share link" : copied} to clipboard.
+          Copied{" "}
+          {copied === "link"
+            ? "share link"
+            : copied === "linkedinpost"
+              ? "LinkedIn post"
+              : copied}{" "}
+          to clipboard.
         </p>
       )}
       <p className="break-all text-xs text-slate-400">{shareUrl}</p>

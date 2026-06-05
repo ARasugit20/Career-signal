@@ -1,8 +1,6 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { buildStaticReport } from "../lib/buildStaticReport";
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api";
-const REPORT_MODE = import.meta.env.VITE_REPORT_MODE || "static";
+import { API_BASE, REPORT_MODE } from "../lib/config";
 
 export function useSignalReport(companies) {
   const [report, setReport] = useState(null);
@@ -17,7 +15,7 @@ export function useSignalReport(companies) {
     return map;
   }, [companies]);
 
-  async function generateSignal(companyId, roleId) {
+  const generateSignal = useCallback(async (companyId, roleId) => {
     setLoading(true);
     setError("");
     setReport(null);
@@ -65,7 +63,7 @@ export function useSignalReport(companies) {
     } finally {
       setLoading(false);
     }
-  }
+  }, [companyLookup]);
 
   return {
     report,
