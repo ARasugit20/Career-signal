@@ -1,0 +1,27 @@
+---
+description: Plan-first workflow before implementing Career Signal features
+alwaysApply: true
+---
+
+# Plan Before Code
+
+For non-trivial tasks, produce a written plan and **stop for user approval** before editing files.
+
+## Required plan sections
+
+1. **Task restatement** — your words; flag anything ambiguous.
+2. **File list** — every file to touch or create, and why.
+3. **Mode impact** — static / AI / both; error and fallback behavior (especially missing API key, malformed JSON, GitHub rate limits).
+4. **Schema impact** — changes to `companies.json` or shared types; note both client and server copies.
+5. **Test cases** — add or update under `client/src/**/*.test.*`.
+6. **Rollback** — how to revert if the change breaks deploy or static mode.
+
+## After approval
+
+- Smallest reasonable diffs; match naming/style in touched files.
+- Run `npm run test:client` and `npm run build:client` before considering done.
+- Do not edit the plan file unless the user asks.
+
+## Interrogate before shipping
+
+Ask yourself (and surface in the plan): malformed `companies.json`? GitHub API 403? Share URL without valid `company`/`role` params? Does static mode still work with zero API key?

@@ -1,0 +1,41 @@
+---
+description: Career Signal architectural invariants and mode boundaries
+alwaysApply: true
+---
+
+# Career Signal Architecture
+
+## Stack and layout
+
+- Monorepo: React 19 + Vite client (`client/`), Node/Express 5 server (`server/`).
+- Three tabs in `client/src/App.jsx`: Signal Report, Gap Analysis, Outreach Tracker.
+- Tests: Vitest under `client/`, run via `npm run test:client`.
+
+## Static vs AI mode
+
+- **Default is static** (`VITE_REPORT_MODE=static`): reports built client-side from `client/src/data/companies.json`.
+- Mode branching belongs in `client/src/hooks/useSignalReport.js` — not in components.
+- **AI mode** calls `POST /api/signal` (`server/routes/signal.js`) via Anthropic SDK.
+- Current behavior: if `ANTHROPIC_API_KEY` is missing, AI mode returns an error — it does **not** auto-fallback to static. Adding fallback requires explicit design and user approval.
+
+## Page responsibilities
+
+| Tab | Data source | Backend |
+|-----|-------------|---------|
+| Signal Report | `companies.json` (static) or `/api/signal` (AI) | Optional |
+| Gap Analysis | Public GitHub API | None |
+| Outreach Tracker | `localStorage` | None |
+
+Do not route Gap Analysis or Outreach through the Express server.
+
+## Data and config guardrails
+
+- `client/src/data/companies.json` and `server/data/companies.json` must stay **identical** when curated data changes.
+- Do not modify `companies.json` schema, `vercel.json`, or `.env.example` structure without calling it out in the plan first.
+- New roles should include `source_notes` when adding companies; keep signals categorical (Strong / Developing / Gap) — no fake percentage scores.
+
+## Shared logic
+
+- Static report builder: `client/src/lib/buildStaticReport.js`
+- Report schema validation: `client/src/lib/reportSchema.js`
+- Do not duplicate report-building or schema logic in components — extend existing lib modules.
